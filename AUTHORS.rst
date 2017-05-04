@@ -1,7 +1,6 @@
-Authors
+Autor
 -------
 
-* Eric (New contributor)
-* Anthony 
+* Jaroslav Páral
 
 
