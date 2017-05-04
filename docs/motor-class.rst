@@ -17,6 +17,8 @@ Nejprve je potřeba vytvořit si instanci motorů:
 Vytvořil se objekt ``motor``, který je nastaven na port ``A`` a na typ ``LARGE``.
 
 .. |logo| image:: images/Advanced_Palette_UnregulatedMotor_1.png
+
+
 .. table:: Truth table for "not"
    :align : center
 +---------+---------+
@@ -24,9 +26,37 @@ Vytvořil se objekt ``motor``, který je nastaven na port ``A`` a na typ ``LARGE
 +---------+---------+
 
 
-.. image:: images/Advanced_Palette_UnregulatedMotor_1.png
+
+.. |logo1| image:: images/lego-soft_motor-unregulated.png
+
+.. |logo2| image:: images/lego-soft_motor-regulated.png
+
+
+.. table:: Truth table for "not"
+   :align : center
++---------+---------+
+| |logo1| | |logo2| |
++---------+---------+
+
+
+Pokus na druho
+
+.. table:: Truth table for "not"
+   :widths: auto
+   :align : center
+
+   =====  =====
+     A    not A
+   =====  =====
+   False  True
+   True   False
+   =====  =====
+
+
+
+.. figure:: images/Advanced_Palette_UnregulatedMotor_1.png
    :width: 25%
-.. image:: images/Action_Palette_LargeMotor_On.png
+.. figure:: images/Action_Palette_LargeMotor_On.png
    :width: 25%
 
 LEGO poskytuje dva způsoby obsluhy motorů. 
@@ -63,4 +93,6 @@ Po vytvoření objektu ``motor`` na něm lze volat funkce. Pro nastavení neregu
    :width: 25%
    :align: center
 
+
+Pokus
 
