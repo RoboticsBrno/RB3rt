@@ -64,10 +64,10 @@ Lze řídit čistě výkon motorů (neregulované/modré motory v LEGO Softwaru)
 
 .. image:: images/lego-soft_motor-unregulated.png
    :width: 25%
-   :align: right
+   :align: center
 .. image:: images/lego-soft_motor-regulated.png
    :width: 25%
-   :align: left
+   :align: middle
 
 Po vytvoření objektu ``motor`` na něm lze volat funkce. Pro nastavení neregulovaného motoru je potřeba zavolat na objekt funkci ``unregulated(int power)``.
 

@@ -35,6 +35,7 @@ Contents:
    :glob:
 
     motor-class
+    markdown
    *
 
 
