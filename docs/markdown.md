@@ -14,3 +14,6 @@ Why are not this pictures in the PDF?
 
 ![](images/Action_Palette_LargeMotor_On.png ) ![](images/Advanced_Palette_UnregulatedMotor_1.png )
 
+
+![](images/lego-soft_motor-unregulated-n.png ) ![](images/lego-soft_motor-regulated-n.png )
+

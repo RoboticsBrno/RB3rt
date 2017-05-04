@@ -16,42 +16,8 @@ Nejprve je potřeba vytvořit si instanci motorů:
 
 Vytvořil se objekt ``motor``, který je nastaven na port ``A`` a na typ ``LARGE``.
 
-.. |logo| image:: images/Advanced_Palette_UnregulatedMotor_1.png
-
-
-.. table:: Truth table for "not"
-   :align : center
-+---------+---------+
-| |logo|  | |logo|  |
-+---------+---------+
-
-
-
-.. |logo1| image:: images/lego-soft_motor-unregulated.png
-
-.. |logo2| image:: images/lego-soft_motor-regulated.png
-
-
-.. table:: Truth table for "not"
-   :align : center
-+---------+---------+
-| |logo1| | |logo2| |
-+---------+---------+
-
 
 Pokus na druho
-
-.. table:: Truth table for "not"
-   :widths: auto
-   :align : center
-
-   =====  =====
-     A    not A
-   =====  =====
-   False  True
-   True   False
-   =====  =====
-
 
 
 .. figure:: images/Advanced_Palette_UnregulatedMotor_1.png
@@ -64,10 +30,8 @@ Lze řídit čistě výkon motorů (neregulované/modré motory v LEGO Softwaru)
 
 .. image:: images/lego-soft_motor-unregulated.png
    :width: 25%
-   :align: center
 .. image:: images/lego-soft_motor-regulated.png
    :width: 25%
-   :align: middle
 
 Po vytvoření objektu ``motor`` na něm lze volat funkce. Pro nastavení neregulovaného motoru je potřeba zavolat na objekt funkci ``unregulated(int power)``.
 
@@ -75,24 +39,13 @@ Po vytvoření objektu ``motor`` na něm lze volat funkce. Pro nastavení neregu
 
    motor.unregulated(50);
 
-.. image:: images/lego-soft_motor-unregulated.png
+
+.. image:: images/lego-soft_motor-unregulated-n.png
    :width: 25%
-.. image:: images/lego-soft_motor-regulated.png
+.. image:: images/lego-soft_motor-regulated-n.png
    :width: 25%
 
 Test
 
 
-
-Po vytvoření objektu ``motor`` na něm lze volat funkce. Pro nastavení neregulovaného motoru je potřeba zavolat na objekt funkci ``unregulated(int power)``.
-
-.. image:: images/lego-soft_motor-unregulated.png
-   :width: 25%
-   :align: center
-.. image:: images/lego-soft_motor-regulated.png
-   :width: 25%
-   :align: center
-
-
-Pokus
 
