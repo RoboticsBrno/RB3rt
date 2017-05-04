@@ -15,11 +15,7 @@
 import sys
 import os
 
-from recommonmark.parser import CommonMarkParser
 
-source_parsers = {'.md': CommonMarkParser}
-
-source_suffix = ['.rst', '.md']
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -49,7 +45,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'EV3RT CXX dokumentace'
+project = u'EV3RT CXX API dokumentace'
 copyright = u'2017, Jaroslav Páral'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -104,7 +100,10 @@ pygments_style = 'sphinx'
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-html_theme = 'default'
+import sphinx_rtd_theme
+html_theme = "sphinx_rtd_theme"
+html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
+#html_theme = 'default'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -181,8 +180,21 @@ html_static_path = ['_static']
 # This is the file name suffix for HTML files (e.g. ".xhtml").
 #html_file_suffix = None
 
+# Language to be used for generating the HTML full-text search index.
+# Sphinx supports the following languages:
+#   'da', 'de', 'en', 'es', 'fi', 'fr', 'hu', 'it', 'ja'
+#   'nl', 'no', 'pt', 'ro', 'ru', 'sv', 'tr'
+#html_search_language = 'en'
+
+# A dictionary with options for the search language support, empty by default.
+# Now only 'ja' uses this config value
+#html_search_options = {'type': 'default'}
+
+# The name of a javascript file (relative to the configuration directory) that
+# implements a search results scorer. If empty, the default will be used.
+#html_search_scorer = 'scorer.js'
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'ReadtheDocsTemplatedoc'
+htmlhelp_basename = 'EV3RTCXXAPIdokumentacedoc'
 
 
 # -- Options for LaTeX output ---------------------------------------------
@@ -190,6 +202,7 @@ htmlhelp_basename = 'ReadtheDocsTemplatedoc'
 latex_elements = {
 # The paper size ('letterpaper' or 'a4paper').
 #'papersize': 'letterpaper',
+
 
 # The font size ('10pt', '11pt' or '12pt').
 #'pointsize': '10pt',
@@ -202,8 +215,8 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-  ('index', 'ReadtheDocsTemplate.tex', u'Read the Docs Template Documentation',
-   u'Read the Docs', 'manual'),
+  ('index', u'EV3RTCXXAPIdokumentace.tex', u'EV3RT CXX API dokumentace',
+   u'Jaroslav Páral', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -232,8 +245,8 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'readthedocstemplate', u'Read the Docs Template Documentation',
-     [u'Read the Docs'], 1)
+    ('index', 'ev3rtcxxapidokumentace', u'EV3RT CXX API dokumentace',
+     [u'Jaroslav Páral'], 1)
 ]
 
 # If true, show URL addresses after external links.
@@ -246,8 +259,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', 'ReadtheDocsTemplate', u'Read the Docs Template Documentation',
-   u'Read the Docs', 'ReadtheDocsTemplate', 'One line description of project.',
+  ('index', 'EV3RTCXXAPIdokumentace', u'EV3RT CXX API dokumentace',
+   u'Jaroslav Páral', 'EV3RTCXXAPIdokumentace', 'One line description of project.',
    'Miscellaneous'),
 ]
 
@@ -262,3 +275,15 @@ texinfo_documents = [
 
 # If true, do not generate a @detailmenu in the "Top" node's menu.
 #texinfo_no_detailmenu = False
+
+# Markdown support
+
+from recommonmark.parser import CommonMarkParser
+
+# The suffix of source filenames.
+source_suffix = ['.rst', '.md']
+
+source_parsers = {
+	'.md': CommonMarkParser,
+}
+
