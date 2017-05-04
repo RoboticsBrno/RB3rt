@@ -29,13 +29,16 @@ Contribute
 - Issue Tracker: github.com/$project/$project/issues
 - Source Code: github.com/$project/$project
 
-Support
+Kontakt
 -------
 
-If you are having issues, please let us know.
-We have a mailing list located at: project@google-groups.com
+S jakýmikoliv dotazy se obracejte na: paral.jarek@gmail.com 
 
-License
+Licence
 -------
 
-The project is licensed under the BSD license.
+Tato dokumentace je pod `CC BY-SA 4.0`__
+
+.. _CC : https://creativecommons.org/licenses/by-sa/4.0/#
+
+__ CC_
