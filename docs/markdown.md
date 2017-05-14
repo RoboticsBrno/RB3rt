@@ -17,3 +17,4 @@ Why are not this pictures in the PDF?
 
 ![](images/lego-soft_motor-unregulated-n.png ) ![](images/lego-soft_motor-regulated-n.png )
 
+Test zda markdown opravdu funguje.
