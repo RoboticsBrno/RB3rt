@@ -39,7 +39,7 @@ Při inicializaci je potřeba se rozhodnout v jakém režimu budete chtít s mot
 
 
 Výkon a rychlost
-*****
+*****************
 
 .. note:: 
     Parametry při nastavování rychlosti a výkonu.
@@ -51,46 +51,46 @@ off()
 ########
 
 .. image:: images/lego-soft_motor-medium-off.png
-   :width: 50%
+   :width: 200px
 
 .. code-block:: cpp
     
     void off(bool brake = true)
 
-Funkce ``off(bool brake = true)`` zastevuje motor. Nastavuje rychlost nebo výkon (v závislosti na daném režimu) na 0. Jako paremetr se předává zda má motor zároveň brzdit (``true``) nebo se volně protáčet (``false``). Ve výchozím stavu brzdí (``false``). 
+Funkce ``off()`` zastevuje motor. Nastavuje rychlost nebo výkon (v závislosti na daném režimu) na 0. Jako paremetr se předává zda má motor zároveň brzdit (``true``) nebo se volně protáčet (``false``). Ve výchozím stavu brzdí (``false``). 
 
 
 on()
 ########
 
 .. image:: images/lego-soft_motor-medium.png
-   :width: 50%
+   :width: 200px
 
 .. code-block:: cpp
     
     void on(int power = 50)
 
-Funkce ``on(int power = 50)`` nastavuje rychlost motoru. Jako paremetr se předává požadovaná rychlost v rozsahu -100 až 100. Při zadání čísla mimo rozsah je nastavena maximální/minimální povolená hodnota (-101 => -100; 101 => 100). Ve výchozím stavu je hodnota 50. 
+Funkce ``on()`` nastavuje rychlost motoru. Jako paremetr se předává požadovaná rychlost v rozsahu -100 až 100. Při zadání čísla mimo rozsah je nastavena maximální/minimální povolená hodnota (-101 => -100; 101 => 100). Ve výchozím stavu je hodnota 50. 
 
 Čas a otáčky
-*****
+*************
 
 .. note:: 
     Nové parametry při nastavování otáček.
 
         * ``speed``: rychlost motoru při otáčení o daný počet stupňů; rozsah od -100 do 100
-        * ``time_ms``: čas v milisekundách, po který se bude motor točit; rozsah od  0 do 4 294 967 295
-        * ``degrees``: počet stupňů, o které se má motor otočit; rozsah od  -2 147 483 648 do 2 147 483 647
-        * ``rotations``: počet otáček, které má motor udělat; rozsah: +-3.4*10^(+-38)
+        * ``time_ms``: čas v milisekundách, po který se bude motor točit; 
+        * ``degrees``: počet stupňů, o které se má motor otočit; lze otáčet i o více než +- 360 stupňů
+        * ``rotations``: počet otáček, které má motor udělat; lze zadávat i desetinná čísla
         * ``brake``: brždění po otočení o daný počet stupňů; ``true`` - motor po dotočení brzí, ``false`` - motor lze volně protáčet
         * ``blocking``:  když ``true`` - funkce blokuje další provádění programu, dokud nedokončí svůj úkol
         * ``wait_after_ms``:  parametr, který nastavuje čekání po před zahájením dané akce (jen v případě ``blocking = true``); nechte výchozí hodnotu 
 
 onForSeconds()
-########
+################
 
 .. image:: images/lego-soft_motor-medium-onForSeconds.png
-   :width: 50%
+   :width: 200px
 
 .. code-block:: cpp
     
@@ -101,16 +101,16 @@ onForSeconds()
 Funkce ``onForSeconds()`` nastavuje čas, jak dlouho se má motor točit. Jako paremetry se předávají: ``speed``, ``time_ms``, ``brake``. 
 
 
-.. note:: LEGO pracuje se sekundami a desetinými čísli, EV3CXX používá milisekundy a celá čísla
+.. note:: LEGO pracuje se sekundami a desetinnými čísly, EV3CXX používá milisekundy a celá čísla
 
-.. warning:: Funkce je vždy blokující. Program tedy po danou dobu stojí.  
+.. warning:: Funkce je vždy blokující. Další příkazy v programu se začnou vykonávat až funkce skončí.  
 
 
 onForDegrees()
-########
+################
 
 .. image:: images/lego-soft_motor-medium-onForDegrees.png
-   :width: 50%
+   :width: 200px
 
 .. code-block:: cpp
     
@@ -120,13 +120,13 @@ onForDegrees()
                       bool_t blocking = true, 
                       unsigned int wait_after_ms = 60)
 
-Funkce ``onForDegrees()`` nastavuje počet stupňu, o které se má motor otočit. Jedna otáčka motoru, odpovída 360 stupňům. Jako paremetry se předávají: ``speed``, ``degrees``, ``brake``, ``blocking``, ``wait_after_ms``. 
+Funkce ``onForDegrees()`` nastavuje počet stupňů, o které se má motor otočit. Jedna otáčka motoru odpovída 360 stupňům. Jako paremetry se předávají: ``speed``, ``degrees``, ``brake``, ``blocking``, ``wait_after_ms``. 
 
 onForRotations()
-########
+##################
 
 .. image:: images/lego-soft_motor-medium-onForRotations.png
-   :width: 50%
+   :width: 200px
 
 .. code-block:: cpp
     
@@ -142,7 +142,7 @@ Funkce ``onForRotations()`` nastavuje počet otáček, o které se má motor oto
 Dostupné funkce
 **********************
 
-Po vytvoření objektu ``motor`` na něm lze volat funkce:
+Po vytvoření objektu ``motor`` lze na něm volat funkce:
 
 * ``off()`` - vypne motory a začne brzit
 * ``on()`` - nastaví rychlost na motorech
