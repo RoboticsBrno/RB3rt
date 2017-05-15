@@ -15,7 +15,7 @@ Mezi hlavní přednosti systéme EV3RT patří:
  * velmi rychlí start (do 5 sekund) a vypnutí prakticky okamžitě
  * jednodušší úprava a doprogramování vlastních funkcí do jádra systému
  * podpora dynamické alokace
- * preemptivní multitasking = exaktně přesné přepínání procesů (do 8 μs)
+ * preemptivní multitasking a rychlí přepínání tasků (do 8 μs)
  * multiplatformní
 
 Hlavním cílem EV3RT CXX API je umožnit jednoduchý přechod uživatelům zvyklým na standardní LEGO vývojové prostředí (`LEGO MINDSTORMS EV3 Software <https://www.lego.com/cs-cz/mindstorms/downloads/download-software>`_) Proto jim je celé API přizpůsobeno a většina funkcí se jmenuje a chová stejně jako v originální vývojovém prostředí.
@@ -24,7 +24,7 @@ Hlavním cílem EV3RT CXX API je umožnit jednoduchý přechod uživatelům zvyk
     :align: center
     :alt: LEGO MINDSTORMS EV3 originální software
     
-
+    
 .. _EV3RT: http://ev3rt-git.github.io/
 
 
