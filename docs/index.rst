@@ -35,7 +35,7 @@ Contents:
    :glob:
 
    ev3cxx*
-   robotutorial*
+   Robotutoriál <ev3cxx_robotutorial/index>
    *
 
 

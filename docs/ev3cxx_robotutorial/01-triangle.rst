@@ -1,4 +1,4 @@
-Robotutoriál - 01 - trojúhelník
+01 - trojúhelník
 ===================================
 
 Prvním tvým úkolem bude naučit robota jezdit. 
@@ -36,11 +36,11 @@ Zkus si ještě pohrát s počtem otáček.
 A to je v tomto úkolu vše. 
 Pro inspiraci se můžeš podívat jak by program vypadal v LEGO Softwaru a níže najdeš ukázkovou verzi programu.
 
-.. image:: images/ev3cxx_robotutorial_01-triangle.png
+.. image:: ../images/ev3cxx_robotutorial_01-triangle.png
    :width: 500px
    :align: center
 
 
-.. literalinclude:: ev3cxx_robotutorial/01-triangle/app.cpp
+.. literalinclude:: 01-triangle/app.cpp
    :language: cpp
 

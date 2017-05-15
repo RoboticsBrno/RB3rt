@@ -1,4 +1,4 @@
-Robotutoriál - 02 - čtverec
+02 - čtverec
 ===================================
 
 Prvním tvým úkolem bylo naučit robota jezdit ve tvaru trojúhelníků.
@@ -10,11 +10,11 @@ Místo kopírování kódu použijeme cyklus.
 Cyklus za nás provede opakování kódu sám, bez toho abychom jej museli kamkoliv kopírovat.
 
 
-.. image:: images/ev3cxx_robotutorial_02-square.png
+.. image:: ../images/ev3cxx_robotutorial_02-square.png
    :width: 500px
    :align: center
 
 
-.. literalinclude:: ev3cxx_robotutorial/02-square/app.cpp
+.. literalinclude:: 02-square/app.cpp
    :language: cpp
 

@@ -1,5 +1,8 @@
-Robotutoriál - úvod
+Úvod
 ===================================
+
+.. toctree::
+    :global:
 
 Vítejte v Robotutoriálu. V následujících 7 lekcích tě provedu základními úlohami, které tě naučí pracovat s LEGO MINDSTORMS EV3.
 
@@ -11,7 +14,7 @@ Barevný senzor nastav tak, aby jsi měl snímačem k zemi (návod strana 52).
 Nezapomeňte složit i barevnou kostku, budeme ji potřebovat.
 
 
-.. figure:: images/lego-mindstorms-ev3-education-kit-with-software.jpg
+.. figure:: ../images/lego-mindstorms-ev3-education-kit-with-software.jpg
    :align: center
 
    Robot Educator
