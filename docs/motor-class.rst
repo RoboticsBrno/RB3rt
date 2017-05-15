@@ -15,11 +15,11 @@ K dispozici máme všechny porty na *Bricku* : ``A``, ``B``, ``C`` a ``D``.
 U typů máme 3 volby, které odpovídají stejným blokům v originálním LEGO softwaru: ``UNREGULATED``, ``MEDIUM`` a ``LARGE``.
 
 .. image:: images/lego-soft_motor-unregulated.png
-   :width: 25%
+   :width: 32%
 .. image:: images/lego-soft_motor-medium.png
-   :width: 25%
+   :width: 32%
 .. image:: images/lego-soft_motor-large.png
-   :width: 25%
+   :width: 32%
 
 * Neregulované motory (``UNREGULATED``): u motorů se nastavuje jen výkon
 * Regulované motory střední a velké (``MEDIUM`` a ``LARGE``): u motorů se nastavuje rychlost
