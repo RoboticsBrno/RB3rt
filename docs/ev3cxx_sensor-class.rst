@@ -209,7 +209,7 @@ Příklad:
 UltrasonicSensor
 *****************
 
-ultrazvukový senzor je primárně určen na měření vzdálenosti. Můžeme jej využít pro detekci překážky, určení vzdálenosti od mantinelu nebo i pro korekci jízdy. 
+Ultrazvukový senzor je primárně určen na měření vzdálenosti. Můžeme jej využít pro detekci překážky, určení vzdálenosti od mantinelu nebo i pro korekci jízdy. 
 
 
 .. note:: Šíření ultrazvukových vln v prostoru
@@ -233,7 +233,7 @@ Ultrazvuk v EV3CXX poskytuje tyto funkce:
 * ``millimeters()`` - vrací naměřenou vzdálenost v milimetrech
 * ``inches()`` - vrací naměřenou vzdálenost v palcích
 * ``inchesLine()`` - vrací naměřenou vzdálenost v line (1/12 palce)
-* ``listen()`` - vrací zda přijímá signal z jiného ultrazvukového vysílače
+* ``listen()`` - vrací zda přijímá signál z jiného ultrazvukového vysílače
 
 .. warning:: 
    Ultrazvuk v EV3 umí měřit v rozsahu od 3 do 255 centimetrů. 
@@ -321,3 +321,107 @@ listen()
     int listen();
 
 Senzor poslouchá a pokud zachytí ultrazvukový signál, od jiného vysílače, vrací ``true``, jinak ``false``.
+
+
+
+GyroSensor
+*****************
+
+
+Gyroskop umožňuje změřit o kolik stupňů se robot otočil nebo jak rychle se otáčí. 
+EV3 obsahuje jednoosý gyroskop a tak si při stavbě musíte vybrat v jaké rovině chcete měřit.
+
+
+Gyroskop v EV3CXX poskytuje tyto funkce:
+
+* ``angle()`` - vrací aktuální úhel natočení ve stupních
+* ``rate()`` - vrací aktuální rychlost otáčení ve stupních za vteřinu
+* ``reset()`` - nastavuje počáteční polohu gyroskopu
+* ``resetHard()`` - provádí úplný restart senzoru
+
+
+.. warning:: 
+   Gyroskop v EV3 se občas zasekne a začne měnit aktuální úhel (ujíždět), i když se robot nehýbe. 
+   Většinou nepomůže standardní ``reset()`` a proto je v těchto případech potřeba provést ``resetHard()``.
+   
+   Při každém vytváření objektu ze třídy GyroSensor se provádí ``resetHard()``. V tento moment se nesmí gyroskop pohybovat, jinak bude měřit špatně.  
+
+angle() 
+###############
+
+.. image:: images/lego-soft_sensor-gyro-angle.png
+   :height: 90px
+
+.. code-block:: cpp
+    
+    int angle();
+
+Vrací aktuální úhel natočení vůči počáteční pozici (odchylku od počáteční pozice). Počáteční pozice se nastavuje při vytváření objektu nebo pomocí funkce ``reset()``.
+
+Rozsah měření je od -32768 do 32767. Při překročení maximální nebo minimální hodnoty (např. 32767 + 1) začne gyroskop vracet hodnotu z druhého konce rozsahu (=> -32768).
+
+.. warning:: 
+   Při použití funkce ``rate()`` dochází k restartu počáteční polohy u funkce ``angle()``. Ta pak ukazuje opět od nuly.
+
+
+rate() 
+###############
+
+.. image:: images/lego-soft_sensor-gyro-rate.png
+   :height: 90px
+
+.. code-block:: cpp
+    
+    int rate();
+
+Vrací aktuální rychlost změny polohy ve stupních za sekundu.
+
+.. warning:: 
+   Při použití funkce ``rate()`` dochází k restartu počáteční polohy u funkce ``angle()``. Ta pak ukazuje opět od nuly.
+
+
+reset() 
+###############
+
+.. image:: images/lego-soft_sensor-gyro-reset.png
+   :height: 90px
+
+.. code-block:: cpp
+    
+    int reset();
+
+Nastavuje počáteční polohy gyroskopu pro funkci ``angle()`` a také kalibruje senzor.
+Při volání funkce ``reset()`` by se Gyro senzor neměl vůbec hýbat. Jinak bude špatně měřit.
+
+Funkce může v některých případech odstranit *ujíždění* aktuálního úhlu gyroskopu pro funkci ``angle()``, ale ne vždy funguje.
+
+
+resetHard() 
+###############
+
+.. code-block:: cpp
+    
+    void resetHard();
+
+
+Provádí úplný restart senzoru. Měl by odstranit problém s ujížděním, kdy ačkoliv se Gyro senzor vůbec nehýbe, jeho poloha má konstantní přírůstek. 
+V tento moment gyroskop nelze využívat a je potřeba jej restartovat.
+
+.. note:: Tato funkce nemá odpovídající blok v LEGO Softwaru. 
+
+.. warning:: 
+   Počítejte s tím, že ``resetHard()`` může trvat i několik sekund a po tuto dobu bude zastaven běh programu. 
+   Je tedy potřeba provádět úplný reset jen v nutných případech a na místech v programu, kde tato prodleva nebude vadit.
+
+   Během restartu se nesmi gyroskop pohybovat, jinak nebude měřit správně.
+
+.. note::
+   Implementace úplného restartu je v celku jednoduchá. 
+   Aby došlo k restartu, je potřeba přepnout gyroskop mezi režimy v jakých  pracuje. 
+   První režim je měří úhel natočení (``angle()``) a druhý režim  měří rychlost otáčení (``rate()``). 
+   Při přepínání mezi těmito režimy dochází k úplnému restartu gyroskopu. 
+   Pro stoprocentní funkčnost se ve funkcí ``resetHard()`` provádí vícenásobné přepínání (``angle()`` => ``reset()`` => ``rate()`` => ``reset()`` => ``angle()``).
+
+   Zdroj 1: https://bricks.stackexchange.com/questions/7115/how-can-ev3-gyro-sensor-drift-be-handled
+
+   Zdroj 2: https://www.us.lego.com/en-us/mindstorms/community/robot?projectid=96894a3a-45db-48f9-9544-abf66f481b32
