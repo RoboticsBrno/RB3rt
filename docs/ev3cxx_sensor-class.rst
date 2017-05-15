@@ -2,7 +2,7 @@ Senzory
 ====================
 
 Když už umíme ovládat motory, můžeme se naučit pracovat se senzory.
-Pomocí senzorů můžeme získavat informace z okolí a reagovat na ně.
+Pomocí senzorů můžeme získávat informace z okolí a reagovat na ně.
 Lze tak třeba řídit rychlost motorů, podle pozice robota na čáře nebo zastavit robota před překážkou.
 V EV3CXX jsou k dispozici všechny základní senzory z LEGO MINDSTORMS EV3.
 
@@ -44,7 +44,7 @@ Metody dostupné ve třídě ``TouchSensor``:
 * ``isPressed()`` - vrací stav senzory 
 * ``waitForPress()`` - čekání, dokud se senzor nezmáčkne
 * ``waitForRelease()`` - čekání, dokud se senzor neuvolní
-* ``waitForClick()`` - čekání na zmáčknutní a uvolnění senzoru
+* ``waitForClick()`` - čekání na zmáčknutí a uvolnění senzoru
 
 
 isPressed() 
@@ -57,7 +57,7 @@ isPressed()
     
     int isPressed();
 
-Vrací ``true`` v přípádě, že je dotykový senzor zmáčnut, jinak ``false``.
+Vrací ``true`` v případě, že je dotykový senzor zmáčknut, jinak ``false``.
 
 void waitForPress() 
 ########################
@@ -99,5 +99,108 @@ void waitForClick()
     
     void waitForClick();
 
-Program je pozastaven, dokud neproběhne zmáčnutí a uvolnění dotykového senzoru.
+Program je pozastaven, dokud neproběhne zmáčknutí a uvolnění dotykového senzoru.
 
+
+ColorSensor
+*****************
+
+Barevný senzor může pracovat v několika režimech: 
+
+* ``getReflected()`` - vrací naměřenou intenzitu odrazu
+* ``getReflectedRawRgb()`` - vrací naměřenou intenzitu odrazu pro jednotlivé barevní složky (RGB - červená, zelená, modrá)
+* ``getAmbient()`` - vrací naměřenou intenzitu odrazu bez přisvětlení (vhodné pro kalibraci)
+* ``getColor()`` - vrací rozpoznanou barvu
+
+getReflected() 
+###############
+
+.. image:: images/lego-soft_sensor-color-getReflected.png
+   :height: 90px
+
+.. code-block:: cpp
+    
+    int getReflected();
+
+Vrací naměřenou intenzitu odraženého světla z povrchu.
+Lze tak rozpoznat barvu povrchu a například tak detekovat černo čáru na bílém podkladu.
+
+Rozsah výstupních hodnot je od 0 do 100.
+
+.. note::
+    Senzor si při své činnosti snímanou plochu přisvětluje vlastními světly, tak aby mohl lépe určit odrazivost povrchu a nebyl tolik závislý na okolním osvětlení.
+    Přes funkci ``getAmbient()`` je možné určit odrazivost při vypnutém přisvětlení.
+    Po odečtení této hodnoty od ``getReflected()``  by měli být hodnoty za různých světelných podmínek pro stejné povrchy konstantní. 
+
+
+getReflectedRawRgb() 
+#####################
+
+.. code-block:: cpp
+    
+    rgb_raw_t getReflectedRawRgb();
+
+Vrací strukturu s naměřenými hodnotami jednotlivých barevných složek. 
+
+Tato funkce nemá odpovídající blok v LEGO Softwaru. 
+
+Příklad:
+
+    .. code-block:: cpp
+        
+        rgb_raw_t rgb_values;
+        rgb_values = colorS.getReflectedRawRgb();
+        
+        rgb_values.r; // RED value
+
+
+getAmbient() 
+#####################
+
+.. image:: images/lego-soft_sensor-color-getAmbient.png
+   :height: 90px
+
+.. code-block:: cpp
+    
+    int getAmbient();
+
+Vrací naměřenou intenzitu odraženého světla od povrchu, ale **bez přisvětlení vlastními světly**.
+Vhodné pro kalibraci senzoru pro různá osvětlení. Více informací v poznámce u funkce ``getReflected()``.
+
+Rozsah výstupních hodnot je od 0 do 100.
+
+
+getColor() 
+#####################
+
+.. image:: images/lego-soft_sensor-color-getColor.png
+   :height: 90px
+
+.. code-block:: cpp
+    
+    colorid_t getColor();
+
+Vrací rozpoznanou barvu povrchu z výčtového typu ``enum colorid_t``.
+
+Hodnoty v typu ``colorid_t``:
+
+*  ``COLOR_NONE`` - barva nerozpoznána 
+*  ``COLOR_BLACK`` - černá barva  
+*  ``COLOR_BLUE``  - modrá barva 
+*  ``COLOR_GREEN`` - zelená barva  
+*  ``COLOR_YELLOW`` - žlutá barva  
+*  ``COLOR_RED`` - červená barva  
+*  ``COLOR_WHITE`` - bílá barva    
+*  ``COLOR_BROWN`` - hnědá barva  
+
+Příklad:
+
+    .. code-block:: cpp
+        
+        colorid_t color_value;
+        color_value = colorS.getColor();
+        
+        if (color_value == COLOR_BLACK) 
+        {
+             // senzor on black color
+        }
