@@ -34,7 +34,8 @@ Contents:
    :maxdepth: 2
    :glob:
 
-    motor-class
+   ev3cxx*
+   robotutorial*
    *
 
 

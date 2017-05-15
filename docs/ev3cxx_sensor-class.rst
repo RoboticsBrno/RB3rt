@@ -56,7 +56,7 @@ Vrací ``true`` v přípádě, že je dotykový senzor zmáčnut, jinak ``false`
 void waitForPress() 
 ########################
 
-.. image:: images/lego-soft_sensor-touch-waitForX.png
+.. image:: images/lego-soft_sensor-touch-waitForPress.png
    :height: 90px
 
 .. code-block:: cpp
