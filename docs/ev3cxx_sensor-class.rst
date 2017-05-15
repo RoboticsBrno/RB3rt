@@ -39,7 +39,13 @@ Na *Bricku* můžeme využít všechny porty pro senzory: ``1``, ``2``, ``3`` a 
 TouchSensor
 *****************
 
-Po vytvoření objetku touchS, lze na něm volat následující metody.
+Metody dostupné ve třídě ``TouchSensor``:
+
+* ``isPressed()`` - vrací stav senzory 
+* ``waitForPress()`` - čekání, dokud se senzor nezmáčkne
+* ``waitForRelease()`` - čekání, dokud se senzor neuvolní
+* ``waitForClick()`` - čekání na zmáčknutní a uvolnění senzoru
+
 
 isPressed() 
 ############
@@ -63,7 +69,7 @@ void waitForPress()
     
     void waitForPress();
 
-Program je pozastaven, dokud nebude zmáčknuto tlačítko.
+Program je pozastaven, dokud nebude dotykový senzor zmáčknut.
 
 
 void waitForRelease() 
@@ -76,11 +82,12 @@ void waitForRelease()
     
     void waitForRelease();
 
-Program je pozastaven, dokud nebude uvolněno tlačítko.
+Program je pozastaven, dokud nebude dotykový senzor uvolněn.
 
 .. warning:: 
 
-    Nezapomínejte, že v běžném stavu je tlačítko uvolněno a proto nemusí být program při volání této funkce vůbec pozastaven.
+    Nezapomínejte, že v běžném stavu je dotykový senzor uvolněn a proto nemusí být program při volání této funkce vůbec pozastaven. 
+    Je tedy nutné nejprve dotykový senzor zmáčknout a až potom volat tuto funkci.
 
 void waitForClick() 
 ########################
@@ -92,4 +99,5 @@ void waitForClick()
     
     void waitForClick();
 
-Program je pozastaven, dokud neproběhne zmáčnutí a uvolnění tlačítka.
+Program je pozastaven, dokud neproběhne zmáčnutí a uvolnění dotykového senzoru.
+
