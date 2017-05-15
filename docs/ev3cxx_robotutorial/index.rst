@@ -2,7 +2,12 @@
 ===================================
 
 .. toctree::
-    :global:
+   
+   01-triangle
+   02-square
+   03-draw_house
+   04-catch_and_return
+   05-switch
 
 Vítejte v Robotutoriálu. V následujících 7 lekcích tě provedu základními úlohami, které tě naučí pracovat s LEGO MINDSTORMS EV3.
 
