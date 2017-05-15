@@ -310,3 +310,14 @@ Rozsah měření je od 10 do 1200.
    Jelikož ultrazvuk v EV3 má rozlišení na milimetry a v LEGO Softwaru to řeší pomocí desetinných čísel, je v EV3CXX implementována tato funkce.
 
 
+listen() 
+###############
+
+.. image:: images/lego-soft_sensor-ultrasonic-listen.png
+   :height: 90px
+
+.. code-block:: cpp
+    
+    int listen();
+
+Senzor poslouchá a pokud zachytí ultrazvukový signál, od jiného vysílače, vrací ``true``, jinak ``false``.
