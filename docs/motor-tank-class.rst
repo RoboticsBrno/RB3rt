@@ -32,7 +32,8 @@ Výkon a rychlost
 .. note:: 
     Parametry při nastavování rychlosti a výkonu.
 
-        * ``speed``: rychlost motoru při jízdě; rozsah od -100 do 100
+        * ``left_speed``: rychlost levého motoru při jízdě; rozsah od -100 do 100
+        * ``right_speed``: rychlost pravého motoru při jízdě; rozsah od -100 do 100
         * ``brake``: brzdění; ``true`` - motor brzdí, ``false`` - motor lze volně protáčet
 
 off() 
@@ -45,9 +46,9 @@ off()
     
     void off(bool brake = true)
 
-Funkce ``off()`` zastavuje motor. Nastavuje rychlost nebo výkon (v závislosti na daném režimu) na 0. 
-Jako parametr se předává zda má motor zároveň brzdit (``true``) nebo se volně protáčet (``false``). 
-Ve výchozím stavu brzdí (``false``). 
+Funkce ``off()`` zastavuje motory. Nastavuje rychlost nebo výkon (v závislosti na daném režimu) na 0. 
+Jako parametr se předává zda mají být motory zabržděny (``true``) nebo se mají volně protáčet (``false``). 
+Ve výchozím stavu brzdí (``true``). 
 
 
 on()
@@ -60,10 +61,9 @@ on()
     
     void on(int left_speed = 50, int right_speed = 50)
 
-Funkce ``on()`` nastavuje rychlost motoru. 
-Jako parametr se předává požadovaná rychlost v rozsahu -100 až 100. 
-Ve výchozím stavu jsou ``left_speed`` a ``right_speed`` rovny hodnotě 50. 
-Jako parametry se předávají: ``left_speed``, ``right_speed``. 
+Funkce ``on()`` nastavuje rychlost motorů. 
+Jako parametry se předávájí rychlosti motorů v rozsahu -100 až 100. 
+Ve výchozím stavu jsou ``left_speed`` a ``right_speed`` rovny hodnotě 50.
 
 Čas a otáčky
 *************
@@ -71,8 +71,8 @@ Jako parametry se předávají: ``left_speed``, ``right_speed``.
 .. note:: 
     Nové parametry při nastavování otáček.
 
-        * ``left_speed``: rychlost levého motoru při běhu; rozsah od -100 do 100
-        * ``right_speed``: rychlost pravého motoru při běhu; rozsah od -100 do 100
+        * ``left_speed``: rychlost levého motoru při jízdě; rozsah od -100 do 100
+        * ``right_speed``: rychlost pravého motoru při jízdě; rozsah od -100 do 100
         * ``time_ms``: čas v milisekundách, po který se budou motory točit; 
         * ``degrees``: počet stupňů, o které se má motor otočit; lze otáčet i o více než +- 360 stupňů
         * ``rotations``: počet otáček, které má motor udělat; lze zadávat i desetinná čísla

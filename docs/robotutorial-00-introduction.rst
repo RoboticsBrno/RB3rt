@@ -7,7 +7,8 @@ V rámci tutoriálu budeme pracovat s robotem Educator. Návod na jeho složení
 
 Při skládání postupuj pečlivě a zkontroluj, že jsi všechny motory a senzory zapojil do správných portů. 
 V našem tutoriálu nebudeme potřebovat Gyro senzor a nemusíš jej tedy sestavovat.
-Barevný senzor nastav tak, aby jsi měl snímačem k zemi (návod strana 52).
+Barevný senzor nastav tak, aby jsi měl snímačem k zemi (návod strana 52). 
+Nezapomeňte složit i barevnou kostku, budeme ji potřebovat.
 
 
 .. figure:: images/lego-mindstorms-ev3-education-kit-with-software.jpg
