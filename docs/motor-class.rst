@@ -51,7 +51,7 @@ off()
 ########
 
 .. image:: images/lego-soft_motor-medium-off.png
-   :width: 200px
+   :height: 90px
 
 .. code-block:: cpp
     
@@ -67,7 +67,7 @@ on()
 ########
 
 .. image:: images/lego-soft_motor-medium.png
-   :width: 200px
+   :height: 90px
 
 .. code-block:: cpp
     
@@ -95,7 +95,7 @@ onForSeconds()
 ################
 
 .. image:: images/lego-soft_motor-medium-onForSeconds.png
-   :width: 200px
+   :height: 90px
 
 .. code-block:: cpp
     
@@ -116,7 +116,7 @@ onForDegrees()
 ################
 
 .. image:: images/lego-soft_motor-medium-onForDegrees.png
-   :width: 200px
+   :height: 90px
 
 .. code-block:: cpp
     
@@ -134,7 +134,7 @@ onForRotations()
 ##################
 
 .. image:: images/lego-soft_motor-medium-onForRotations.png
-   :width: 200px
+   :height: 90px
 
 .. code-block:: cpp
     
