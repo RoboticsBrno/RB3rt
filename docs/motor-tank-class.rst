@@ -8,7 +8,7 @@ Pokud chceš řídit robota jako pásový vozidlo, můžeš využít třídu Mot
    ev3cxx::MotorTank motors(ev3cxx::MotorPort::B, ev3cxx::MotorPort::C);
 
 
-Vytvořili jsem si tedy instanci ``motors``, kde levý motor je nastaven na port ``B`` a pravý na port ``C``. 
+Vytvořili jsme si objekt ``motors``, kde levý motor je nastaven na port ``B`` a pravý na port ``C``. 
 Tankový mód aktuálně podporuje jen ``LARGE`` motory. Ty se tedy nastavuji automaticky.
 
 .. image:: images/lego-soft_motor-tank-on.png

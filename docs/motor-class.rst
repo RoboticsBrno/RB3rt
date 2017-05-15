@@ -9,10 +9,10 @@ Nejprve je potřeba vytvořit si instanci motorů:
    ev3cxx::Motor motor(ev3cxx::MotorPort::A, ev3cxx::MotorType::LARGE);
 
 
-Vytvořili jsem si tedy instanci ``motor``, která je nastavena na port ``A`` a na typ ``LARGE``.
+Vytvořili jsme objekt ``motor``, která je nastavena na port ``A`` a typ ``LARGE``.
 
-K dispozici máme všechny porty na *Bricku* : ``A``, ``B``, ``C`` a ``D``. 
-U typů máme 3 volby, které odpovídají stejným blokům v originálním LEGO softwaru: ``UNREGULATED``, ``MEDIUM`` a ``LARGE``.
+K dispozici máme všechny motorové porty na *Bricku* : ``A``, ``B``, ``C`` a ``D``. 
+U typů máme 3 volby, které odpovídají stejným blokům v originálním LEGO Softwaru: ``UNREGULATED``, ``MEDIUM`` a ``LARGE``.
 
 .. image:: images/lego-soft_motor-unregulated.png
    :width: 32%
@@ -21,9 +21,8 @@ U typů máme 3 volby, které odpovídají stejným blokům v originálním LEGO
 .. image:: images/lego-soft_motor-large.png
    :width: 32%
 
-* Neregulované motory (``UNREGULATED``): u motorů se nastavuje jen výkon
-* Regulované motory střední a velké (``MEDIUM`` a ``LARGE``): u motorů se nastavuje rychlost
-
+* Neregulované motory (``UNREGULATED``): u motorů se nastavuje jen výkon, nerovnosti nebo rozdílné stoupání či klesání budou značně ovlivňovat rychlost
+* Regulované motory střední a velké (``MEDIUM`` a ``LARGE``): u motorů se nastavuje rychlost a motor se tuto rychlost snaží udržovat, upravuje tak výkon v závislosti na okolním prostředí (nerovnosti, překážky, atd.)
 Při inicializaci je potřeba se rozhodnout v jakém režimu budete chtít s motorem pracovat.
 
 
