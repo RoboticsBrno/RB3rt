@@ -388,7 +388,7 @@ reset()
 
 .. code-block:: cpp
     
-    int reset();
+    void reset();
 
 Nastavuje počáteční polohy gyroskopu pro funkci ``angle()`` a také kalibruje senzor.
 Při volání funkce ``reset()`` by se Gyro senzor neměl vůbec hýbat. Jinak bude špatně měřit.
