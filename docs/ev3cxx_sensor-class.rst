@@ -66,34 +66,30 @@ void waitForPress()
 Program je pozastaven, dokud nebude zmáčknuto tlačítko.
 
 
+void waitForRelease() 
+########################
 
-off() 
-########
-
-.. image:: images/lego-soft_motor-medium-off.png
+.. image:: images/lego-soft_sensor-touch-waitForRelease.png
    :height: 90px
 
 .. code-block:: cpp
     
-    void off(bool brake = true)
+    void waitForRelease();
 
-Funkce ``off()`` zastevuje motor. 
-Nastavuje rychlost nebo výkon (v závislosti na daném režimu) na 0. 
-Jako parametr se předává zda má motor zároveň brzdit (``true``) nebo se volně protáčet (``false``). 
-Ve výchozím stavu brzdí (``false``). 
+Program je pozastaven, dokud nebude uvolněno tlačítko.
 
+.. warning:: 
 
-on()
-########
+    Nezapomínejte, že v běžném stavu je tlačítko uvolněno a proto nemusí být program při volání této funkce vůbec pozastaven.
 
-.. image:: images/lego-soft_motor-medium.png
+void waitForClick() 
+########################
+
+.. image:: images/lego-soft_sensor-touch-waitForClick.png
    :height: 90px
 
 .. code-block:: cpp
     
-    void on(int power = 50)
+    void waitForClick();
 
-Funkce ``on()`` nastavuje rychlost motoru. 
-Jako parametr se předává požadovaná rychlost v rozsahu -100 až 100.
-Ve výchozím stavu je hodnota 50. 
-
+Program je pozastaven, dokud neproběhne zmáčnutí a uvolnění tlačítka.
