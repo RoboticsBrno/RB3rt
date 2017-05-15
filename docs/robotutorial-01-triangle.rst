@@ -26,7 +26,8 @@ Tím pádem musí být rychlost motoru na jedné straně 0 a na druhé straně t
 Poslední parametr, který musíme upravit je počet otáček.
 Je potřeba najít optimální číslo pro otáčku, tak abychom měli pěkný trojúhelník.
 To již ale nechám na tobě. 
-Vyzkoušej si různá čísla a vyber to nejvhodnější. Jen nezapomeň, že můžeš zadávat i desetinná čísla (s desetinnou tečkou: ``1.5``).
+Vyzkoušej si různá čísla a vyber to nejvhodnější. 
+Jen nezapomeň, že můžeš zadávat i desetinná čísla (s desetinnou tečkou: `1.5`).
 
 Pokud máš tyto dva příkazy napsané, stačí už je jen dvakrát rozkopírovat a odzkoušet.
 Jestli nebudeš mít úplně přesný trojúhelník, nic se neděje. 
@@ -42,4 +43,4 @@ Pro inspiraci se můžeš podívat jak by program vypadal v LEGO Softwaru a ní�
 
 .. literalinclude:: ev3cxx_robotutorial/01-triangle/app.cpp
    :language: cpp
-   :linenos:
+

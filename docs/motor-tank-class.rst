@@ -12,7 +12,7 @@ Vytvořili jsem si tedy instanci ``motors``, kde levý motor je nastaven na port
 Tankový mód aktuálně podporuje jen ``LARGE`` motory. Ty se tedy nastavuji automaticky.
 
 .. image:: images/lego-soft_motor-tank-on.png
-   :width: 200px
+   :height: 90px
    :align: center
 
 .. note:: 
@@ -39,8 +39,7 @@ off()
 ########
 
 .. image:: images/lego-soft_motor-tank-off.png
-   :width: 200px
-   :align: center
+   :height: 90px
 
 .. code-block:: cpp
     
@@ -55,8 +54,7 @@ on()
 ########
 
 .. image:: images/lego-soft_motor-tank-on.png
-   :width: 200px
-   :align: center
+   :height: 90px
 
 .. code-block:: cpp
     
@@ -86,8 +84,7 @@ onForSeconds()
 ################
 
 .. image:: images/lego-soft_motor-tank-onForSeconds.png
-   :width: 200px
-   :align: center
+   :height: 90px
 
 .. code-block:: cpp
     
@@ -109,8 +106,7 @@ onForDegrees()
 ################
 
 .. image:: images/lego-soft_motor-tank-onForDegrees.png
-   :width: 200px
-   :align: center
+   :height: 90px
 
 .. code-block:: cpp
     
@@ -129,8 +125,7 @@ onForRotations()
 ##################
 
 .. image:: images/lego-soft_motor-tank-onForRotations.png
-   :width: 200px
-   :align: center
+   :height: 90px
 
 .. code-block:: cpp
     
