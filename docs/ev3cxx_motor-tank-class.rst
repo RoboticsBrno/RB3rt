@@ -50,6 +50,7 @@ Metoda ``off()`` zastavuje motory. Nastavuje rychlost nebo výkon (v závislosti
 Jako parametr se předává zda mají být motory zabržděny (``true``) nebo se mají volně protáčet (``false``). 
 Ve výchozím stavu brzdí (``true``). 
 
+Použití: ``motors.off();``
 
 on()
 ########
@@ -64,6 +65,8 @@ on()
 Metoda ``on()`` nastavuje rychlost motorů. 
 Jako parametry se předávají rychlosti motorů v rozsahu -100 až 100. 
 Ve výchozím stavu jsou ``left_speed`` a ``right_speed`` rovny hodnotě 50.
+
+Použití: ``motors.on(40, 50);``
 
 Čas a otáčky
 *************
@@ -91,11 +94,12 @@ onForSeconds()
     void onForSeconds(int left_speed = 50, 
                       int right_speed = 50,
                       unsigned int time_ms = 1000, 
-                      bool_t brake = true) 
+                      bool brake = true) 
 
 Metoda ``onForSeconds()`` nastavuje čas, jak dlouho se mají motory točit. 
 Jako parametry se předávají: ``left_speed``, ``right_speed``, ``time_ms``, ``brake``. 
 
+Použití: ``motors.onForSeconds(40, 50, 3000);``
 
 .. note:: LEGO Software pracuje se sekundami a desetinnými čísly, EV3CXX používá milisekundy a celá čísla
 
@@ -113,8 +117,8 @@ onForDegrees()
     void onForDegrees(int left_speed = 50, 
                       int right_speed = 50, 
                       int degrees = 360, 
-                      bool_t brake = true, 
-                      bool_t blocking = true, 
+                      bool brake = true, 
+                      bool blocking = true, 
                       unsigned int wait_after_ms = 60)
 
 Metoda ``onForDegrees()`` nastavuje počet stupňů, o které se mají motory otočit. 
@@ -132,8 +136,8 @@ onForRotations()
     void onForRotations(int left_speed = 50, 
                         int right_speed = 50 
                         float rotations = 1, 
-                        bool_t brake = true, 
-                        bool_t blocking = true, 
+                        bool brake = true, 
+                        bool blocking = true, 
                         unsigned int wait_after_ms = 60)
 
 Metoda ``onForRotations()`` nastavuje počet otáček, o které se mají motory otočit. 

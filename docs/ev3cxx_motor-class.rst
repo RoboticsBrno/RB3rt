@@ -61,6 +61,8 @@ Nastavuje rychlost nebo výkon (v závislosti na daném režimu) na 0.
 Jako parametr se předává zda má motor zároveň brzdit (``true``) nebo se volně protáčet (``false``). 
 Ve výchozím stavu brzdí (``false``). 
 
+Použití: ``motor.off();``
+
 
 on()
 ########
@@ -75,6 +77,8 @@ on()
 Metoda ``on()`` nastavuje rychlost motoru. 
 Jako parametr se předává požadovaná rychlost v rozsahu -100 až 100.
 Ve výchozím stavu je hodnota 50. 
+
+Použití: ``motor.on(40);``
 
 Čas a otáčky
 *************
@@ -105,6 +109,8 @@ onForSeconds()
 Metoda ``onForSeconds()`` nastavuje čas, jak dlouho se má motor točit. 
 Jako parametry se předávají: ``speed``, ``time_ms``, ``brake``. 
 
+
+Použití: ``motor.onForSeconds(40, 3000);``
 
 .. note:: LEGO pracuje se sekundami a desetinnými čísly, EV3CXX používá milisekundy a celá čísla
 
