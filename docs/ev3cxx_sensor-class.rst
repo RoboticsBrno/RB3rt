@@ -59,7 +59,7 @@ isPressed()
 
 Vrací ``true`` v případě, že je dotykový senzor zmáčknut, jinak ``false``.
 
-void waitForPress() 
+waitForPress() 
 ########################
 
 .. image:: images/lego-soft_sensor-touch-waitForPress.png
@@ -72,7 +72,7 @@ void waitForPress()
 Program je pozastaven, dokud nebude dotykový senzor zmáčknut.
 
 
-void waitForRelease() 
+waitForRelease() 
 ########################
 
 .. image:: images/lego-soft_sensor-touch-waitForRelease.png
@@ -89,7 +89,7 @@ Program je pozastaven, dokud nebude dotykový senzor uvolněn.
     Nezapomínejte, že v běžném stavu je dotykový senzor uvolněn a proto nemusí být program při volání této metody vůbec pozastaven. 
     Je tedy nutné nejprve dotykový senzor zmáčknout a až potom volat tuto metodu.
 
-void waitForClick() 
+waitForClick() 
 ########################
 
 .. image:: images/lego-soft_sensor-touch-waitForClick.png
