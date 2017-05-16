@@ -147,6 +147,22 @@ Jako parametry se předávají: ``left_speed``, ``right_speed``, ``rotations``, 
 
 Použití: ``motors.onForDegrees(50, 50, 1);``
 
+leftMotor() a rightMotor()
+##########################
+
+.. code-block:: cpp
+    
+    Motor& rightMotor();
+
+Přes tyto metody, lze ovládat jen jeden motor z páru. 
+Nemusíte si tedy vytvářet nový objekt, pokud budete chtít v určitých situacích ovládat jen jeden motor.
+Metoda ``leftMotor()`` vrací instanci motoru, který byl při vytvoření objektu předán jako první, ``rightMotor()`` vrací druhý motor v pořadí.
+
+Metody vrací instanci daného motoru a následně nad ní lze volat všechny metody dostupné ve třídě ``Motor``.
+
+
+Použití: ``motors.rightMotor().onForDegrees(50, 1);``
+
 Dostupné metody
 **********************
 
@@ -157,3 +173,5 @@ Po vytvoření objektu ``motor`` lze na něm volat metody:
 * ``onForSeconds()`` - jede po zadanou dobu
 * ``onForDegrees()`` - otočí se o daný počet stupňů
 * ``onForRotations()`` - otočí se o daný počet otáček
+* ``leftMotor()`` - vrátí instanci levého motoru
+* ``rightMotor()`` - vrátí instanci pravého motoru
