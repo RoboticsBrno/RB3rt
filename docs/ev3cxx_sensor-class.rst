@@ -141,6 +141,7 @@ getReflectedRawRgb()
     rgb_raw_t getReflectedRawRgb();
 
 Vrací strukturu s naměřenými hodnotami jednotlivých barevných složek. 
+Jako návratová hodnota je použita struktura ``rgb_raw_t``, která obsahuje jednotlivé složky (r,g,b). 
 
 .. note:: Tato metoda nemá odpovídající blok v LEGO Softwaru. 
 
@@ -152,6 +153,8 @@ Příklad:
         rgb_values = colorS.getReflectedRawRgb();
         
         rgb_values.r; // RED value
+        rgb_values.g; // GREEN value
+        rgb_values.b; // BLUE value
 
 
 getAmbient() 
@@ -202,7 +205,7 @@ Příklad:
         
         if (color_value == COLOR_BLACK) 
         {
-             // senzor on black color
+             // sensor on black color
         }
 
 

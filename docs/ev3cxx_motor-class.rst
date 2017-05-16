@@ -78,7 +78,7 @@ Metoda ``on()`` nastavuje rychlost motoru.
 Jako parametr se předává požadovaná rychlost v rozsahu -100 až 100.
 Ve výchozím stavu je hodnota 50. 
 
-Použití: ``motor.on(40);``
+Použití: ``motor.on(50);``
 
 Čas a otáčky
 *************
@@ -104,13 +104,12 @@ onForSeconds()
     
     void onForSeconds(int speed = 50, 
                       unsigned int time_ms = 1000, 
-                      bool_t brake = true) 
+                      bool brake = true) 
 
 Metoda ``onForSeconds()`` nastavuje čas, jak dlouho se má motor točit. 
 Jako parametry se předávají: ``speed``, ``time_ms``, ``brake``. 
 
-
-Použití: ``motor.onForSeconds(40, 3000);``
+Použití: ``motor.onForSeconds(50, 1000);``
 
 .. note:: LEGO pracuje se sekundami a desetinnými čísly, EV3CXX používá milisekundy a celá čísla
 
@@ -127,13 +126,15 @@ onForDegrees()
     
     void onForDegrees(int speed = 50, 
                       int degrees = 360, 
-                      bool_t brake = true, 
-                      bool_t blocking = true, 
+                      bool brake = true, 
+                      bool blocking = true, 
                       unsigned int wait_after_ms = 60)
 
 Metoda ``onForDegrees()`` nastavuje počet stupňů, o které se má motor otočit. 
 Jedna otáčka motoru odpovídá 360 stupňům. 
 Jako parametry se předávají: ``speed``, ``degrees``, ``brake``, ``blocking``, ``wait_after_ms``. 
+
+Použití: ``motor.onForDegrees(50, 360);``
 
 onForRotations()
 ##################
@@ -145,13 +146,14 @@ onForRotations()
     
     void onForRotations(int speed = 50, 
                         float rotations = 1, 
-                        bool_t brake = true, 
-                        bool_t blocking = true, 
+                        bool brake = true, 
+                        bool blocking = true, 
                         unsigned int wait_after_ms = 60)
 
 Metoda ``onForRotations()`` nastavuje počet otáček, o které se má motor otočit. 
 Jako parametry se předávají: ``speed``, ``rotations``, ``brake``, ``blocking``, ``wait_after_ms``. 
 
+Použití: ``motor.onForRotations(50, 1);``
 
 Dostupné metody
 **********************

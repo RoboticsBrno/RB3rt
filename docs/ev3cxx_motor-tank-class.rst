@@ -66,7 +66,7 @@ Metoda ``on()`` nastavuje rychlost motorů.
 Jako parametry se předávají rychlosti motorů v rozsahu -100 až 100. 
 Ve výchozím stavu jsou ``left_speed`` a ``right_speed`` rovny hodnotě 50.
 
-Použití: ``motors.on(40, 50);``
+Použití: ``motors.on(50, 50);``
 
 Čas a otáčky
 *************
@@ -99,7 +99,7 @@ onForSeconds()
 Metoda ``onForSeconds()`` nastavuje čas, jak dlouho se mají motory točit. 
 Jako parametry se předávají: ``left_speed``, ``right_speed``, ``time_ms``, ``brake``. 
 
-Použití: ``motors.onForSeconds(40, 50, 3000);``
+Použití: ``motors.onForSeconds(50, 50, 1000);``
 
 .. note:: LEGO Software pracuje se sekundami a desetinnými čísly, EV3CXX používá milisekundy a celá čísla
 
@@ -125,6 +125,8 @@ Metoda ``onForDegrees()`` nastavuje počet stupňů, o které se mají motory ot
 Jedna otáčka motoru odpovídá 360 stupňům. 
 Jako parametry se předávají: ``left_speed``, ``right_speed``, ``degrees``, ``brake``, ``blocking``, ``wait_after_ms``. 
 
+Použití: ``motors.onForDegrees(50, 50, 360);``
+
 onForRotations()
 ##################
 
@@ -143,6 +145,7 @@ onForRotations()
 Metoda ``onForRotations()`` nastavuje počet otáček, o které se mají motory otočit. 
 Jako parametry se předávají: ``left_speed``, ``right_speed``, ``rotations``, ``brake``, ``blocking``, ``wait_after_ms``. 
 
+Použití: ``motors.onForDegrees(50, 50, 1);``
 
 Dostupné metody
 **********************
