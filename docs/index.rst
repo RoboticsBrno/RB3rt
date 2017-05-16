@@ -12,10 +12,10 @@ Systém EV3RT vznikl jako port japonského real-time operačního systém `TOPPE
 
 Mezi hlavní přednosti systéme EV3RT patří:
  * malá velikost systému (do 5 MB) i uživatelských aplikací (do 1 MB)
- * velmi rychlí start (do 5 sekund) a vypnutí prakticky okamžitě
+ * velmi rychlý start (do 5 sekund) a vypnutí prakticky okamžitě
  * jednodušší úprava a doprogramování vlastních funkcí do jádra systému
  * podpora dynamické alokace
- * preemptivní multitasking a rychlí přepínání tasků (do 8 μs)
+ * preemptivní multitasking a rychlé přepínání tasků (do 8 μs)
  * multiplatformní
 
 Hlavním cílem EV3RT CXX API je umožnit jednoduchý přechod uživatelům zvyklým na standardní LEGO vývojové prostředí (`LEGO MINDSTORMS EV3 Software <https://www.lego.com/cs-cz/mindstorms/downloads/download-software>`_) Proto jim je celé API přizpůsobeno a většina funkcí se jmenuje a chová stejně jako v originální vývojovém prostředí.

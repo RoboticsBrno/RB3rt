@@ -86,8 +86,8 @@ Program je pozastaven, dokud nebude dotykový senzor uvolněn.
 
 .. warning:: 
 
-    Nezapomínejte, že v běžném stavu je dotykový senzor uvolněn a proto nemusí být program při volání této funkce vůbec pozastaven. 
-    Je tedy nutné nejprve dotykový senzor zmáčknout a až potom volat tuto funkci.
+    Nezapomínejte, že v běžném stavu je dotykový senzor uvolněn a proto nemusí být program při volání této metody vůbec pozastaven. 
+    Je tedy nutné nejprve dotykový senzor zmáčknout a až potom volat tuto metodu.
 
 void waitForClick() 
 ########################
@@ -129,7 +129,7 @@ Rozsah výstupních hodnot je od 0 do 100.
 
 .. note::
     Senzor si při své činnosti snímanou plochu přisvětluje vlastními světly, tak aby mohl lépe určit odrazivost povrchu a nebyl tolik závislý na okolním osvětlení.
-    Přes funkci ``getAmbient()`` je možné určit odrazivost při vypnutém přisvětlení.
+    Přes metodu ``getAmbient()`` je možné určit odrazivost při vypnutém přisvětlení.
     Po odečtení této hodnoty od ``getReflected()``  by měli být hodnoty za různých světelných podmínek pro stejné povrchy konstantní. 
 
 
@@ -142,7 +142,7 @@ getReflectedRawRgb()
 
 Vrací strukturu s naměřenými hodnotami jednotlivých barevných složek. 
 
-.. note:: Tato funkce nemá odpovídající blok v LEGO Softwaru. 
+.. note:: Tato metoda nemá odpovídající blok v LEGO Softwaru. 
 
 Příklad:
 
@@ -165,7 +165,7 @@ getAmbient()
     int getAmbient();
 
 Vrací naměřenou intenzitu odraženého světla od povrchu, ale **bez přisvětlení vlastními světly**.
-Vhodné pro kalibraci senzoru pro různá osvětlení. Více informací v poznámce u funkce ``getReflected()``.
+Vhodné pro kalibraci senzoru pro různá osvětlení. Více informací v poznámce u metody ``getReflected()``.
 
 Rozsah výstupních hodnot je od 0 do 100.
 
@@ -226,7 +226,7 @@ Ultrazvukový senzor je primárně určen na měření vzdálenosti. Můžeme je
        Zdroj obrázku: http://arcbotics.com/products/sparki/parts/ultrasonic-range-finder/
 
 
-Ultrazvuk v EV3CXX poskytuje tyto funkce:
+Ultrazvuk v EV3CXX poskytuje tyto metody:
 
 
 * ``centimeters()`` - vrací naměřenou vzdálenost v centimetrech
@@ -256,7 +256,7 @@ Vrací naměřenou vzdálenost v centimetrech.
 Rozsah měření je od 3 do 255.
 
 .. warning:: 
-   Na rozdíl od LEGO Softwaru, v EV3CXX tato funkce pracuje v celých číslech. Pokud chcete vyšší přesnost použijte funkci ``millimeters()``.
+   Na rozdíl od LEGO Softwaru, v EV3CXX tato metoda pracuje v celých číslech. Pokud chcete vyšší přesnost použijte metodu ``millimeters()``.
 
 
 millimeters() 
@@ -271,8 +271,8 @@ Vrací naměřenou vzdálenost v milimetrech.
 Rozsah měření je od 30 do 2550.
 
 .. note:: 
-   Tato funkce nemá odpovídající blok v LEGO Softwaru. 
-   Jelikož ultrazvuk v EV3 má rozlišení na milimetry a v LEGO Softwaru to řeší pomocí desetinných čísel, je v EV3CXX implementována tato funkce.
+   Tato metoda nemá odpovídající blok v LEGO Softwaru. 
+   Jelikož ultrazvuk v EV3 má rozlišení na milimetry a v LEGO Softwaru to řeší pomocí desetinných čísel, je v EV3CXX implementována tato metoda.
 
 
 
@@ -291,7 +291,7 @@ Vrací naměřenou vzdálenost v palcích (1 palec = 2,54 cm).
 Rozsah měření je od 1 do 100.
 
 .. warning:: 
-   Na rozdíl od LEGO Softwaru, v EV3CXX tato funkce pracuje v celých číslech. Pokud chcete vyšší přesnost použijte funkci ``inchesLine()``.
+   Na rozdíl od LEGO Softwaru, v EV3CXX tato metoda pracuje v celých číslech. Pokud chcete vyšší přesnost použijte metodu ``inchesLine()``.
 
 
 inchesLine() 
@@ -306,8 +306,8 @@ Vrací naměřenou vzdálenost v linech (1 line = 1/12 palce).
 Rozsah měření je od 10 do 1200.
 
 .. note:: 
-   Tato funkce nemá odpovídající blok v LEGO Softwaru. 
-   Jelikož ultrazvuk v EV3 má rozlišení na milimetry a v LEGO Softwaru to řeší pomocí desetinných čísel, je v EV3CXX implementována tato funkce.
+   Tato metoda nemá odpovídající blok v LEGO Softwaru. 
+   Jelikož ultrazvuk v EV3 má rozlišení na milimetry a v LEGO Softwaru to řeší pomocí desetinných čísel, je v EV3CXX implementována tato metoda.
 
 
 listen() 
@@ -332,7 +332,7 @@ Gyroskop umožňuje změřit o kolik stupňů se robot otočil nebo jak rychle s
 EV3 obsahuje jednoosý gyroskop a tak si při stavbě musíte vybrat v jaké rovině chcete měřit.
 
 
-Gyroskop v EV3CXX poskytuje tyto funkce:
+Gyroskop v EV3CXX poskytuje tyto metody:
 
 * ``angle()`` - vrací aktuální úhel natočení ve stupních
 * ``rate()`` - vrací aktuální rychlost otáčení ve stupních za vteřinu
@@ -356,12 +356,12 @@ angle()
     
     int angle();
 
-Vrací aktuální úhel natočení vůči počáteční pozici (odchylku od počáteční pozice). Počáteční pozice se nastavuje při vytváření objektu nebo pomocí funkce ``reset()``.
+Vrací aktuální úhel natočení vůči počáteční pozici (odchylku od počáteční pozice). Počáteční pozice se nastavuje při vytváření objektu nebo pomocí metody ``reset()``.
 
 Rozsah měření je od -32768 do 32767. Při překročení maximální nebo minimální hodnoty (např. 32767 + 1) začne gyroskop vracet hodnotu z druhého konce rozsahu (=> -32768).
 
 .. warning:: 
-   Při použití funkce ``rate()`` dochází k restartu počáteční polohy u funkce ``angle()``. Ta pak ukazuje opět od nuly.
+   Při použití metody ``rate()`` dochází k restartu počáteční polohy u metody ``angle()``. Ta pak ukazuje opět od nuly.
 
 
 rate() 
@@ -377,7 +377,7 @@ rate()
 Vrací aktuální rychlost změny polohy ve stupních za sekundu.
 
 .. warning:: 
-   Při použití funkce ``rate()`` dochází k restartu počáteční polohy u funkce ``angle()``. Ta pak ukazuje opět od nuly.
+   Při použití metody ``rate()`` dochází k restartu počáteční polohy u metody ``angle()``. Ta pak ukazuje opět od nuly.
 
 
 reset() 
@@ -390,10 +390,10 @@ reset()
     
     void reset();
 
-Nastavuje počáteční polohy gyroskopu pro funkci ``angle()`` a také kalibruje senzor.
-Při volání funkce ``reset()`` by se Gyro senzor neměl vůbec hýbat. Jinak bude špatně měřit.
+Nastavuje počáteční polohy gyroskopu pro metodu ``angle()`` a také kalibruje senzor.
+Při volání metody ``reset()`` by se Gyro senzor neměl vůbec hýbat. Jinak bude špatně měřit.
 
-Funkce může v některých případech odstranit *ujíždění* aktuálního úhlu gyroskopu pro funkci ``angle()``, ale ne vždy funguje.
+Metoda může v některých případech odstranit *ujíždění* aktuálního úhlu gyroskopu pro metodu ``angle()``, ale ne vždy funguje.
 
 
 resetHard() 
@@ -407,7 +407,7 @@ resetHard()
 Provádí úplný restart senzoru. Měl by odstranit problém s ujížděním, kdy ačkoliv se Gyro senzor vůbec nehýbe, jeho poloha má konstantní přírůstek. 
 V tento moment gyroskop nelze využívat a je potřeba jej restartovat.
 
-.. note:: Tato funkce nemá odpovídající blok v LEGO Softwaru. 
+.. note:: Tato metoda nemá odpovídající blok v LEGO Softwaru. 
 
 .. warning:: 
    Počítejte s tím, že ``resetHard()`` může trvat i několik sekund a po tuto dobu bude zastaven běh programu. 
@@ -420,7 +420,7 @@ V tento moment gyroskop nelze využívat a je potřeba jej restartovat.
    Aby došlo k restartu, je potřeba přepnout gyroskop mezi režimy v jakých  pracuje. 
    První režim je měří úhel natočení (``angle()``) a druhý režim  měří rychlost otáčení (``rate()``). 
    Při přepínání mezi těmito režimy dochází k úplnému restartu gyroskopu. 
-   Pro stoprocentní funkčnost se ve funkcí ``resetHard()`` provádí vícenásobné přepínání (``angle()`` => ``reset()`` => ``rate()`` => ``reset()`` => ``angle()``).
+   Pro stoprocentní funkčnost se v metodě ``resetHard()`` provádí vícenásobné přepínání (``angle()`` => ``reset()`` => ``rate()`` => ``reset()`` => ``angle()``).
 
    Zdroj 1: https://bricks.stackexchange.com/questions/7115/how-can-ev3-gyro-sensor-drift-be-handled
 

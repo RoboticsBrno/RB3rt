@@ -18,7 +18,7 @@ Tankový mód aktuálně podporuje jen ``LARGE`` motory. Ty se tedy nastavuji au
 .. note:: 
     Pokud nebude řečeno jinak: 
     Při zadání parametru mimo rozsah se automaticky nastavuje maximální/minimální povolená hodnota. 
-    Výchozí hodnoty funkcí odpovídají standardním hodnotám v LEGO Softwaru. 
+    Výchozí hodnoty metod odpovídají standardním hodnotám v LEGO Softwaru. 
 
     Příklad: 
         Rozsah povolených hodnot je v rozmezí od -100 do 100. 
@@ -46,7 +46,7 @@ off()
     
     void off(bool brake = true)
 
-Funkce ``off()`` zastavuje motory. Nastavuje rychlost nebo výkon (v závislosti na daném režimu) na 0. 
+Metoda ``off()`` zastavuje motory. Nastavuje rychlost nebo výkon (v závislosti na daném režimu) na 0. 
 Jako parametr se předává zda mají být motory zabržděny (``true``) nebo se mají volně protáčet (``false``). 
 Ve výchozím stavu brzdí (``true``). 
 
@@ -61,8 +61,8 @@ on()
     
     void on(int left_speed = 50, int right_speed = 50)
 
-Funkce ``on()`` nastavuje rychlost motorů. 
-Jako parametry se předávájí rychlosti motorů v rozsahu -100 až 100. 
+Metoda ``on()`` nastavuje rychlost motorů. 
+Jako parametry se předávají rychlosti motorů v rozsahu -100 až 100. 
 Ve výchozím stavu jsou ``left_speed`` a ``right_speed`` rovny hodnotě 50.
 
 Čas a otáčky
@@ -77,7 +77,7 @@ Ve výchozím stavu jsou ``left_speed`` a ``right_speed`` rovny hodnotě 50.
         * ``degrees``: počet stupňů, o které se má motor otočit; lze otáčet i o více než +- 360 stupňů
         * ``rotations``: počet otáček, které má motor udělat; lze zadávat i desetinná čísla
         * ``brake``: brzdění po otočení o daný počet stupňů; ``true`` - motor po dotočení brzdí, ``false`` - motor lze volně protáčet
-        * ``blocking``:  když ``true`` - funkce blokuje další provádění programu, dokud nedokončí svůj úkol
+        * ``blocking``:  když ``true`` - metoda blokuje další provádění programu, dokud nedokončí svůj úkol
         * ``wait_after_ms``:  parametr, který nastavuje čekání po před zahájením dané akce (jen v případě ``blocking = true``); nechte výchozí hodnotu 
 
 onForSeconds()
@@ -93,13 +93,13 @@ onForSeconds()
                       unsigned int time_ms = 1000, 
                       bool_t brake = true) 
 
-Funkce ``onForSeconds()`` nastavuje čas, jak dlouho se mají motory točit. 
+Metoda ``onForSeconds()`` nastavuje čas, jak dlouho se mají motory točit. 
 Jako parametry se předávají: ``left_speed``, ``right_speed``, ``time_ms``, ``brake``. 
 
 
 .. note:: LEGO Software pracuje se sekundami a desetinnými čísly, EV3CXX používá milisekundy a celá čísla
 
-.. warning:: Funkce je vždy blokující. Další příkazy v programu se začnou vykonávat až funkce skončí.  
+.. warning:: Metoda je vždy blokující. Další příkazy v programu se začnou vykonávat až metoda skončí.  
 
 
 onForDegrees()
@@ -117,7 +117,7 @@ onForDegrees()
                       bool_t blocking = true, 
                       unsigned int wait_after_ms = 60)
 
-Funkce ``onForDegrees()`` nastavuje počet stupňů, o které se mají motory otočit. 
+Metoda ``onForDegrees()`` nastavuje počet stupňů, o které se mají motory otočit. 
 Jedna otáčka motoru odpovídá 360 stupňům. 
 Jako parametry se předávají: ``left_speed``, ``right_speed``, ``degrees``, ``brake``, ``blocking``, ``wait_after_ms``. 
 
@@ -136,16 +136,16 @@ onForRotations()
                         bool_t blocking = true, 
                         unsigned int wait_after_ms = 60)
 
-Funkce ``onForRotations()`` nastavuje počet otáček, o které se mají motory otočit. 
+Metoda ``onForRotations()`` nastavuje počet otáček, o které se mají motory otočit. 
 Jako parametry se předávají: ``left_speed``, ``right_speed``, ``rotations``, ``brake``, ``blocking``, ``wait_after_ms``. 
 
 
-Dostupné funkce
+Dostupné metody
 **********************
 
-Po vytvoření objektu ``motor`` lze na něm volat funkce:
+Po vytvoření objektu ``motor`` lze na něm volat metody:
 
-* ``off()`` - vypne motory a začne brzit
+* ``off()`` - vypne motory a začne brzdit
 * ``on()`` - nastaví rychlost na motorech
 * ``onForSeconds()`` - jede po zadanou dobu
 * ``onForDegrees()`` - otočí se o daný počet stupňů

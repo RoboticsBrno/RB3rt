@@ -29,7 +29,7 @@ Při inicializaci je potřeba se rozhodnout v jakém režimu budete chtít s mot
 .. note:: 
     Pokud nebude řečeno jinak: 
     Při zadání parametru mimo rozsah se automaticky nastavuje maximální/minimální povolená hodnota. 
-    Výchozí hodnoty funkcí odpovídají standardním hodnotám v LEGO Softwaru. 
+    Výchozí hodnoty metod odpovídají standardním hodnotám v LEGO Softwaru. 
 
     Příklad: 
         Rozsah povolených hodnot je v rozmezí od -100 do 100. 
@@ -56,7 +56,7 @@ off()
     
     void off(bool brake = true)
 
-Funkce ``off()`` zastevuje motor. 
+Metoda ``off()`` zastavuje motor. 
 Nastavuje rychlost nebo výkon (v závislosti na daném režimu) na 0. 
 Jako parametr se předává zda má motor zároveň brzdit (``true``) nebo se volně protáčet (``false``). 
 Ve výchozím stavu brzdí (``false``). 
@@ -72,7 +72,7 @@ on()
     
     void on(int power = 50)
 
-Funkce ``on()`` nastavuje rychlost motoru. 
+Metoda ``on()`` nastavuje rychlost motoru. 
 Jako parametr se předává požadovaná rychlost v rozsahu -100 až 100.
 Ve výchozím stavu je hodnota 50. 
 
@@ -87,7 +87,7 @@ Ve výchozím stavu je hodnota 50.
         * ``degrees``: počet stupňů, o které se má motor otočit; lze otáčet i o více než +- 360 stupňů
         * ``rotations``: počet otáček, které má motor udělat; lze zadávat i desetinná čísla
         * ``brake``: brzdění po otočení o daný počet stupňů; ``true`` - motor po dotočení brzdí, ``false`` - motor lze volně protáčet
-        * ``blocking``:  když ``true`` - funkce blokuje další provádění programu, dokud nedokončí svůj úkol
+        * ``blocking``:  když ``true`` - metoda blokuje další provádění programu, dokud nedokončí svůj úkol
         * ``wait_after_ms``:  parametr, který nastavuje čekání po před zahájením dané akce (jen v případě ``blocking = true``); nechte výchozí hodnotu 
 
 onForSeconds()
@@ -102,13 +102,13 @@ onForSeconds()
                       unsigned int time_ms = 1000, 
                       bool_t brake = true) 
 
-Funkce ``onForSeconds()`` nastavuje čas, jak dlouho se má motor točit. 
+Metoda ``onForSeconds()`` nastavuje čas, jak dlouho se má motor točit. 
 Jako parametry se předávají: ``speed``, ``time_ms``, ``brake``. 
 
 
 .. note:: LEGO pracuje se sekundami a desetinnými čísly, EV3CXX používá milisekundy a celá čísla
 
-.. warning:: Funkce je vždy blokující. Další příkazy v programu se začnou vykonávat až funkce skončí.  
+.. warning:: Metoda je vždy blokující. Další příkazy v programu se začnou vykonávat až metoda skončí.  
 
 
 onForDegrees()
@@ -125,7 +125,7 @@ onForDegrees()
                       bool_t blocking = true, 
                       unsigned int wait_after_ms = 60)
 
-Funkce ``onForDegrees()`` nastavuje počet stupňů, o které se má motor otočit. 
+Metoda ``onForDegrees()`` nastavuje počet stupňů, o které se má motor otočit. 
 Jedna otáčka motoru odpovídá 360 stupňům. 
 Jako parametry se předávají: ``speed``, ``degrees``, ``brake``, ``blocking``, ``wait_after_ms``. 
 
@@ -143,16 +143,16 @@ onForRotations()
                         bool_t blocking = true, 
                         unsigned int wait_after_ms = 60)
 
-Funkce ``onForRotations()`` nastavuje počet otáček, o které se má motor otočit. 
+Metoda ``onForRotations()`` nastavuje počet otáček, o které se má motor otočit. 
 Jako parametry se předávají: ``speed``, ``rotations``, ``brake``, ``blocking``, ``wait_after_ms``. 
 
 
-Dostupné funkce
+Dostupné metody
 **********************
 
-Po vytvoření objektu ``motor`` lze na něm volat funkce:
+Po vytvoření objektu ``motor`` lze na něm volat metody:
 
-* ``off()`` - vypne motory a začne brzit
+* ``off()`` - vypne motory a začne brzdit
 * ``on()`` - nastaví rychlost na motorech
 * ``onForSeconds()`` - jede po zadanou dobu
 * ``onForDegrees()`` - otočí se o daný počet stupňů
@@ -160,6 +160,6 @@ Po vytvoření objektu ``motor`` lze na něm volat funkce:
 * ``degrees()`` - vrátí aktuální počet stupňů na motoru
 * ``rotations()`` - vrátí aktuální počet otáček na motoru
 * ``currentPower()`` - vrátí aktuální rychlost motoru
-* ``resetPosition()`` - vyresetuje pozici motoru (ovlivní funkce ``degrees()`` a ``rotations()``)
+* ``resetPosition()`` - vyresetuje pozici motoru (ovlivní metoda ``degrees()`` a ``rotations()``)
 * ``getType()`` - vrátí aktuálně nastavený port v systému EV3RT
 
