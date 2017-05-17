@@ -14,7 +14,7 @@ V EV3CXX jsou k dispozici všechny základní senzory z LEGO MINDSTORMS EV3.
 
 .. image:: images/lego-soft_sensor-touch-state.png
    :width: 24%
-.. image:: images/lego-soft_sensor-color-getReflected.png
+.. image:: images/lego-soft_sensor-color-reflected.png
    :width: 24%
 .. image:: images/lego-soft_sensor-ultrasonic-centimetres.png
    :width: 24%
@@ -107,20 +107,20 @@ ColorSensor
 
 Barevný senzor může pracovat v několika režimech: 
 
-* ``getReflected()`` - vrací naměřenou intenzitu odrazu
-* ``getReflectedRawRgb()`` - vrací naměřenou intenzitu odrazu pro jednotlivé barevné složky (RGB - červená, zelená, modrá)
-* ``getAmbient()`` - vrací naměřenou intenzitu odrazu bez přisvětlení (vhodné pro kalibraci)
-* ``getColor()`` - vrací rozpoznanou barvu
+* ``reflected()`` - vrací naměřenou intenzitu odrazu
+* ``reflectedRawRgb()`` - vrací naměřenou intenzitu odrazu pro jednotlivé barevné složky (RGB - červená, zelená, modrá)
+* ``ambient()`` - vrací naměřenou intenzitu odrazu bez přisvětlení (vhodné pro kalibraci)
+* ``color()`` - vrací rozpoznanou barvu
 
-getReflected() 
+reflected() 
 ###############
 
-.. image:: images/lego-soft_sensor-color-getReflected.png
+.. image:: images/lego-soft_sensor-color-reflected.png
    :height: 90px
 
 .. code-block:: cpp
     
-    int getReflected();
+    int reflected();
 
 Vrací naměřenou intenzitu odraženého světla z povrchu.
 Lze tak rozpoznat barvu povrchu a například tak detekovat černou čáru na bílém podkladu.
@@ -129,16 +129,16 @@ Rozsah výstupních hodnot je od 0 do 100.
 
 .. note::
     Senzor si při své činnosti snímanou plochu přisvětluje vlastními světly, tak aby mohl lépe určit odrazivost povrchu a nebyl tolik závislý na okolním osvětlení.
-    Přes metodu ``getAmbient()`` je možné určit odrazivost při vypnutém přisvětlení.
-    Po odečtení této hodnoty od ``getReflected()``  by měly být hodnoty za různých světelných podmínek pro stejné povrchy konstantní. 
+    Přes metodu ``ambient()`` je možné určit odrazivost při vypnutém přisvětlení.
+    Po odečtení této hodnoty od ``reflected()``  by měly být hodnoty za různých světelných podmínek pro stejné povrchy konstantní. 
 
 
-getReflectedRawRgb() 
+reflectedRawRgb() 
 #####################
 
 .. code-block:: cpp
     
-    rgb_raw_t getReflectedRawRgb();
+    rgb_raw_t reflectedRawRgb();
 
 Vrací strukturu s naměřenými hodnotami jednotlivých barevných složek. 
 Jako návratová hodnota je použita struktura ``rgb_raw_t``, která obsahuje jednotlivé složky (r,g,b). 
@@ -150,38 +150,38 @@ Příklad:
     .. code-block:: cpp
         
         rgb_raw_t rgb_values;
-        rgb_values = colorS.getReflectedRawRgb();
+        rgb_values = colorS.reflectedRawRgb();
         
         rgb_values.r; // RED value
         rgb_values.g; // GREEN value
         rgb_values.b; // BLUE value
 
 
-getAmbient() 
+ambient() 
 #####################
 
-.. image:: images/lego-soft_sensor-color-getAmbient.png
+.. image:: images/lego-soft_sensor-color-ambient.png
    :height: 90px
 
 .. code-block:: cpp
     
-    int getAmbient();
+    int ambient();
 
 Vrací naměřenou intenzitu světla dopadajícího na senzor, ale **bez přisvětlení vlastními světly**.
-Vhodné např. pro kalibraci senzoru pro různá osvětlení. Více informací v poznámce u metody ``getReflected()``.
+Vhodné např. pro kalibraci senzoru pro různá osvětlení. Více informací v poznámce u metody ``reflected()``.
 
 Rozsah výstupních hodnot je od 0 do 100.
 
 
-getColor() 
+color() 
 #####################
 
-.. image:: images/lego-soft_sensor-color-getColor.png
+.. image:: images/lego-soft_sensor-color-color.png
    :height: 90px
 
 .. code-block:: cpp
     
-    colorid_t getColor();
+    colorid_t color();
 
 Vrací rozpoznanou barvu povrchu z výčtového typu ``enum colorid_t``.
 
@@ -201,7 +201,7 @@ Příklad:
     .. code-block:: cpp
         
         colorid_t color_value;
-        color_value = colorS.getColor();
+        color_value = colorS.color();
         
         if (color_value == COLOR_BLACK) 
         {
