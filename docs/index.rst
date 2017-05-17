@@ -10,7 +10,7 @@ EV3RT CXX API vzniklo jako C++ nástavba EV3RT C API (ev3api), které je standar
 
 Systém EV3RT vznikl jako port japonského real-time operačního systém `TOPPERS/HRP2 <http://www.toppers.jp/hrp2-kernel.html>`_ pro stavebnici `LEGO MINDSTORMS EV3 <https://www.lego.com/cs-cz/mindstorms/about-ev3>`_. 
 
-Mezi hlavní přednosti systéme EV3RT patří:
+Mezi hlavní přednosti systému EV3RT patří:
  * malá velikost systému (do 5 MB) i uživatelských aplikací (do 1 MB)
  * velmi rychlý start (do 5 sekund) a vypnutí prakticky okamžitě
  * jednodušší úprava a doprogramování vlastních funkcí do jádra systému

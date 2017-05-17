@@ -1,7 +1,7 @@
 Tank motory
 ====================
 
-Pokud chceš řídit robota jako pásový vozidlo, můžeš využít třídu MotorTank
+Pokud chceš řídit robota jako pásové vozidlo, můžeš využít třídu MotorTank
 
 .. code-block:: cpp
 
@@ -15,10 +15,9 @@ Tankový mód aktuálně podporuje jen ``LARGE`` motory. Ty se tedy nastavuji au
    :height: 90px
    :align: center
 
-.. note:: 
-    Pokud nebude řečeno jinak: 
-    Při zadání parametru mimo rozsah se automaticky nastavuje maximální/minimální povolená hodnota. 
-    Výchozí hodnoty metod odpovídají standardním hodnotám v LEGO Softwaru. 
+.. note:: Pokud nebude řečeno jinak: 
+     * při zadání parametru mimo rozsah se automaticky nastavuje maximální/minimální povolená hodnota. 
+     * výchozí hodnoty metod odpovídají standardním hodnotám v LEGO Softwaru. 
 
     Příklad: 
         Rozsah povolených hodnot je v rozmezí od -100 do 100. 
@@ -46,7 +45,7 @@ off()
     
     void off(bool brake = true)
 
-Metoda ``off()`` zastavuje motory. Nastavuje rychlost nebo výkon (v závislosti na daném režimu) na 0. 
+Metoda ``off()`` zastavuje motory. Nastavuje rychlost na 0. 
 Jako parametr se předává zda mají být motory zabržděny (``true``) nebo se mají volně protáčet (``false``). 
 Ve výchozím stavu brzdí (``true``). 
 
@@ -121,7 +120,7 @@ onForDegrees()
                       bool blocking = true, 
                       unsigned int wait_after_ms = 60)
 
-Metoda ``onForDegrees()`` nastavuje počet stupňů, o které se mají motory otočit. 
+Metoda ``onForDegrees()`` nastavuje počet stupňů, o které se má rychlejší motor otočit. 
 Jedna otáčka motoru odpovídá 360 stupňům. 
 Jako parametry se předávají: ``left_speed``, ``right_speed``, ``degrees``, ``brake``, ``blocking``, ``wait_after_ms``. 
 
@@ -142,7 +141,7 @@ onForRotations()
                         bool blocking = true, 
                         unsigned int wait_after_ms = 60)
 
-Metoda ``onForRotations()`` nastavuje počet otáček, o které se mají motory otočit. 
+Metoda ``onForRotations()`` nastavuje počet otáček, o které se má rychlejší motor otočit. 
 Jako parametry se předávají: ``left_speed``, ``right_speed``, ``rotations``, ``brake``, ``blocking``, ``wait_after_ms``. 
 
 Použití: ``motors.onForDegrees(50, 50, 1);``

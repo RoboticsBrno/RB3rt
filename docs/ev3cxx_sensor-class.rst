@@ -57,7 +57,7 @@ isPressed()
     
     int isPressed();
 
-Vrací ``true`` v případě, že je dotykový senzor zmáčknut, jinak ``false``.
+Vrací ``true`` v případě, že je dotykový senzor zmáčklý, jinak ``false``.
 
 waitForPress() 
 ########################
@@ -86,8 +86,8 @@ Program je pozastaven, dokud nebude dotykový senzor uvolněn.
 
 .. warning:: 
 
-    Nezapomínejte, že v běžném stavu je dotykový senzor uvolněn a proto nemusí být program při volání této metody vůbec pozastaven. 
-    Je tedy nutné nejprve dotykový senzor zmáčknout a až potom volat tuto metodu.
+    Nezapomínejte, že v běžném stavu může být dotykový senzor uvolněn.
+    Volání této metody program pozastaví pouze pokud je v daný okamžik dotykový senzor zmáčknutý.
 
 waitForClick() 
 ########################
@@ -108,7 +108,7 @@ ColorSensor
 Barevný senzor může pracovat v několika režimech: 
 
 * ``getReflected()`` - vrací naměřenou intenzitu odrazu
-* ``getReflectedRawRgb()`` - vrací naměřenou intenzitu odrazu pro jednotlivé barevní složky (RGB - červená, zelená, modrá)
+* ``getReflectedRawRgb()`` - vrací naměřenou intenzitu odrazu pro jednotlivé barevné složky (RGB - červená, zelená, modrá)
 * ``getAmbient()`` - vrací naměřenou intenzitu odrazu bez přisvětlení (vhodné pro kalibraci)
 * ``getColor()`` - vrací rozpoznanou barvu
 
@@ -123,14 +123,14 @@ getReflected()
     int getReflected();
 
 Vrací naměřenou intenzitu odraženého světla z povrchu.
-Lze tak rozpoznat barvu povrchu a například tak detekovat černo čáru na bílém podkladu.
+Lze tak rozpoznat barvu povrchu a například tak detekovat černou čáru na bílém podkladu.
 
 Rozsah výstupních hodnot je od 0 do 100.
 
 .. note::
     Senzor si při své činnosti snímanou plochu přisvětluje vlastními světly, tak aby mohl lépe určit odrazivost povrchu a nebyl tolik závislý na okolním osvětlení.
     Přes metodu ``getAmbient()`` je možné určit odrazivost při vypnutém přisvětlení.
-    Po odečtení této hodnoty od ``getReflected()``  by měli být hodnoty za různých světelných podmínek pro stejné povrchy konstantní. 
+    Po odečtení této hodnoty od ``getReflected()``  by měly být hodnoty za různých světelných podmínek pro stejné povrchy konstantní. 
 
 
 getReflectedRawRgb() 
@@ -167,8 +167,8 @@ getAmbient()
     
     int getAmbient();
 
-Vrací naměřenou intenzitu odraženého světla od povrchu, ale **bez přisvětlení vlastními světly**.
-Vhodné pro kalibraci senzoru pro různá osvětlení. Více informací v poznámce u metody ``getReflected()``.
+Vrací naměřenou intenzitu světla dopadajícího na senzor, ale **bez přisvětlení vlastními světly**.
+Vhodné např. pro kalibraci senzoru pro různá osvětlení. Více informací v poznámce u metody ``getReflected()``.
 
 Rozsah výstupních hodnot je od 0 do 100.
 
@@ -222,8 +222,8 @@ Ultrazvukový senzor je primárně určen na měření vzdálenosti. Můžeme je
        :align: center
 
        Ultrazvukové vlny se od vysílače šíří v kuželu.
-       To znamená, že s rostoucí vzdáleností ultrazvuk pokrývají větší plochu. 
-       Zároveň s tím ale klesá jeho rozlišovací schopnost, proto při větších vzdálenostech nedokáže zachytit předměty, které na blízko zachytí.
+       To znamená, že s rostoucí vzdáleností od senzoru pokrývají větší plochu. 
+       Zároveň s tím ale klesá rozlišovací schopnost, proto senzor při větších vzdálenostech nedokáže zachytit předměty, které na blízko zachytí.
        To je podstatný rozdíl v porovnání s infra senzorem, jehož paprsky se šíří prakticky přímo (s mnohem menším rozptylem do stran).
 
        Zdroj obrázku: http://arcbotics.com/products/sparki/parts/ultrasonic-range-finder/
@@ -379,8 +379,6 @@ rate()
 
 Vrací aktuální rychlost změny polohy ve stupních za sekundu.
 
-.. warning:: 
-   Při použití metody ``rate()`` dochází k restartu počáteční polohy u metody ``angle()``. Ta pak ukazuje opět od nuly.
 
 
 reset() 
@@ -393,8 +391,8 @@ reset()
     
     void reset();
 
-Nastavuje počáteční polohy gyroskopu pro metodu ``angle()`` a také kalibruje senzor.
-Při volání metody ``reset()`` by se Gyro senzor neměl vůbec hýbat. Jinak bude špatně měřit.
+Nastavuje počáteční polohu gyroskopu pro metodu ``angle()`` a také kalibruje senzor.
+Při volání metody ``reset()`` by se Gyro senzor neměl vůbec hýbat. Jinak bude špatně měřit. Dejte pozor na vibrace a dojezdy setrvačností.
 
 Metoda může v některých případech odstranit *ujíždění* aktuálního úhlu gyroskopu pro metodu ``angle()``, ale ne vždy funguje.
 

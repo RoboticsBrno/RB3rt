@@ -1,7 +1,7 @@
 Motory
 ====================
 
-Motory jsou jedna z nejzákladnějších komponent robota a proto s nimi začneme. 
+Motory jsou jednou ze základních komponent robota a proto s nimi začneme. 
 Nejprve je potřeba vytvořit si instanci motorů: 
 
 .. code-block:: cpp
@@ -9,7 +9,7 @@ Nejprve je potřeba vytvořit si instanci motorů:
    ev3cxx::Motor motor(ev3cxx::MotorPort::A, ev3cxx::MotorType::LARGE);
 
 
-Vytvořili jsme objekt ``motor``, která je nastavena na port ``A`` a typ ``LARGE``.
+Vytvořili jsme objekt ``motor``, který je nastaven na port ``A`` a typ ``LARGE``.
 
 K dispozici máme všechny motorové porty na *Bricku* : ``A``, ``B``, ``C`` a ``D``. 
 U typů máme 3 volby, které odpovídají stejným blokům v originálním LEGO Softwaru: ``UNREGULATED``, ``MEDIUM`` a ``LARGE``.
@@ -21,19 +21,18 @@ U typů máme 3 volby, které odpovídají stejným blokům v originálním LEGO
 .. image:: images/lego-soft_motor-large.png
    :width: 32%
 
-* Neregulované motory (``UNREGULATED``): u motorů se nastavuje jen výkon, nerovnosti nebo rozdílné stoupání či klesání budou značně ovlivňovat rychlost
-* Regulované motory střední a velké (``MEDIUM`` a ``LARGE``): u motorů se nastavuje rychlost a motor se tuto rychlost snaží udržovat, upravuje tak výkon v závislosti na okolním prostředí (nerovnosti, překážky, atd.)
+* neregulované motory (``UNREGULATED``): u motorů se nastavuje jen výkon, změny zatížení (jízda do kopce) budou značně ovlivňovat rychlost
+* regulované motory střední a velké (``MEDIUM`` a ``LARGE``): u motorů se nastavuje rychlost a motor se tuto rychlost snaží udržovat, upravuje tak výkon v závislosti na okolním prostředí (nerovnosti, překážky, atd.)
 Při inicializaci je potřeba se rozhodnout v jakém režimu budete chtít s motorem pracovat.
 
 
-.. note:: 
-    Pokud nebude řečeno jinak: 
-    Při zadání parametru mimo rozsah se automaticky nastavuje maximální/minimální povolená hodnota. 
-    Výchozí hodnoty metod odpovídají standardním hodnotám v LEGO Softwaru. 
+.. note:: Pokud nebude řečeno jinak: 
+     * při zadání parametru mimo rozsah se automaticky nastavuje maximální/minimální povolená hodnota. 
+     * výchozí hodnoty metod odpovídají standardním hodnotám v LEGO Softwaru. 
 
     Příklad: 
         Rozsah povolených hodnot je v rozmezí od -100 do 100. 
-        Při zadání hodnoty -101, dojde k ořezání na hodnotu -100
+        Při zadání hodnoty -101, dojde k ořezání na hodnotu -100.
         Při zadání hodnoty 101, dojde k ořezání na hodnotu 100. 
 
 
@@ -59,7 +58,7 @@ off()
 Metoda ``off()`` zastavuje motor. 
 Nastavuje rychlost nebo výkon (v závislosti na daném režimu) na 0. 
 Jako parametr se předává zda má motor zároveň brzdit (``true``) nebo se volně protáčet (``false``). 
-Ve výchozím stavu brzdí (``false``). 
+Ve výchozím stavu brzdí (``true``). 
 
 Použití: ``motor.off();``
 
@@ -92,7 +91,7 @@ Použití: ``motor.on(50);``
         * ``rotations``: počet otáček, které má motor udělat; lze zadávat i desetinná čísla
         * ``brake``: brzdění po otočení o daný počet stupňů; ``true`` - motor po dotočení brzdí, ``false`` - motor lze volně protáčet
         * ``blocking``:  když ``true`` - metoda blokuje další provádění programu, dokud nedokončí svůj úkol
-        * ``wait_after_ms``:  parametr, který nastavuje čekání po před zahájením dané akce (jen v případě ``blocking = true``); nechte výchozí hodnotu 
+        * ``wait_after_ms``:  parametr, který nastavuje čekání po ukončení dané akce (jen v případě ``blocking = true``); nechte výchozí hodnotu 
 
 onForSeconds()
 ################
