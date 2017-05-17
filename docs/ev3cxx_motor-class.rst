@@ -167,6 +167,6 @@ Po vytvoření objektu ``motor`` lze na něm volat metody:
 * ``degrees()`` - vrátí aktuální počet stupňů na motoru
 * ``rotations()`` - vrátí aktuální počet otáček na motoru
 * ``currentPower()`` - vrátí aktuální rychlost motoru
-* ``resetPosition()`` - vyresetuje pozici motoru (ovlivní metoda ``degrees()`` a ``rotations()``)
+* ``resetPosition()`` - vyresetuje pozici motoru (ovlivní metodu ``degrees()`` a ``rotations()``)
 * ``getType()`` - vrátí aktuálně nastavený port v systému EV3RT
 
