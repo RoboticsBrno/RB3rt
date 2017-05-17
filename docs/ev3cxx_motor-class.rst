@@ -154,6 +154,71 @@ Jako parametry se předávají: ``speed``, ``rotations``, ``brake``, ``blocking`
 
 Použití: ``motor.onForRotations(50, 1);``
 
+Poloha
+**********************
+
+degrees()
+##################
+
+.. image:: images/lego-soft_motor-degrees.png
+   :height: 90px
+
+.. code-block:: cpp
+    
+    int degrees()
+
+Metoda ``degrees()`` vrací polohu motoru ve stupních.
+
+Použití: ``motor.degrees();``
+
+
+rotations()
+##################
+
+.. image:: images/lego-soft_motor-rotations.png
+   :height: 90px
+
+.. code-block:: cpp
+    
+    float rotations()
+
+Metoda ``rotations()`` vrací polohu motoru v otáčkách a v desetinných číslech.
+
+Použití: ``motor.rotations();``
+
+
+resetPosition()
+##################
+
+.. image:: images/lego-soft_motor-resetPosition.png
+   :height: 90px
+
+.. code-block:: cpp
+    
+    void resetPosition()
+
+Metoda ``resetPosition()`` vyresetuje pozici motoru (ovlivní metodu ``degrees()`` a ``rotations()``).
+
+Použití: ``motor.resetPosition();``
+
+Výkon
+**********************
+
+currentPower()
+##################
+
+.. image:: images/lego-soft_motor-currentPower.png
+   :height: 90px
+
+.. code-block:: cpp
+    
+    int currentPower()
+
+Metoda ``currentPower()`` vrací aktuální rychlost motoru. 
+
+Použití: ``motor.currentPower();``
+
+
 Dostupné metody
 **********************
 
@@ -168,5 +233,5 @@ Po vytvoření objektu ``motor`` lze na něm volat metody:
 * ``rotations()`` - vrátí aktuální počet otáček na motoru
 * ``currentPower()`` - vrátí aktuální rychlost motoru
 * ``resetPosition()`` - vyresetuje pozici motoru (ovlivní metodu ``degrees()`` a ``rotations()``)
-* ``getType()`` - vrátí aktuálně nastavený port v systému EV3RT
+* ``getType()`` - vrátí aktuálně nastavený typ motoru na daném portu v systému EV3RT
 
