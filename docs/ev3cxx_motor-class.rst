@@ -154,8 +154,8 @@ Jako parametry se předávají: ``speed``, ``rotations``, ``brake``, ``blocking`
 
 Použití: ``motor.onForRotations(50, 1);``
 
-Poloha
-**********************
+Čtení polohy a rychlosti
+**************************
 
 degrees()
 ##################
@@ -182,7 +182,7 @@ rotations()
     
     float rotations()
 
-Metoda ``rotations()`` vrací polohu motoru v otáčkách a v desetinných číslech.
+Metoda ``rotations()`` vrací polohu motoru v otáčkách (``float`` = desetinné číslo).
 
 Použití: ``motor.rotations();``
 
@@ -200,9 +200,6 @@ resetPosition()
 Metoda ``resetPosition()`` vyresetuje pozici motoru (ovlivní metodu ``degrees()`` a ``rotations()``).
 
 Použití: ``motor.resetPosition();``
-
-Výkon
-**********************
 
 currentPower()
 ##################
@@ -231,7 +228,7 @@ Po vytvoření objektu ``motor`` lze na něm volat metody:
 * ``onForRotations()`` - otočí se o daný počet otáček
 * ``degrees()`` - vrátí aktuální počet stupňů na motoru
 * ``rotations()`` - vrátí aktuální počet otáček na motoru
-* ``currentPower()`` - vrátí aktuální rychlost motoru
 * ``resetPosition()`` - vyresetuje pozici motoru (ovlivní metodu ``degrees()`` a ``rotations()``)
+* ``currentPower()`` - vrátí aktuální rychlost motoru
 * ``getType()`` - vrátí aktuálně nastavený typ motoru na daném portu v systému EV3RT
 
