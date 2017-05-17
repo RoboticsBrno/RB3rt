@@ -43,7 +43,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'EV3RT CXX dokumentace'
+project = u'EV3RT C++ API dokumentace'
 copyright = u'2017, Jaroslav Páral'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -196,8 +196,8 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-  ('index', 'ReadtheDocsTemplate.tex', u'Read the Docs Template Documentation',
-   u'Read the Docs', 'manual'),
+  ('index', 'ReadtheDocsTemplate.tex', u'EV3RT C++ API dokumentace',
+   u'Jaroslav Páral', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
