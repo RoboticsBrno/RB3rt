@@ -40,6 +40,7 @@ Contents:
    ev3cxx_brick-class
    ev3cxx_time-class
    Robotutoriál <ev3cxx_robotutorial/index>
+   Instalace vývojového prostředí <rb3rt-install/index>
    *
 
 
