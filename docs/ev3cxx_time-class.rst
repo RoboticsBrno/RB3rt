@@ -5,7 +5,7 @@ Pro práci s časem je v EV3CXX k dispozici:
 
 
 * ``wait()`` - čekání v milisekundách
-* ``StopWatch`` - třída pro práci se stopkama, umožňuje měření a časování
+* ``StopWatch`` - třída pro práci se stopkami, umožňuje měření a časování
 
 
 Čekání
@@ -42,7 +42,8 @@ Pro odměřování času v EV3CXX slouží třída ``StopWatch``.
 
 .. note:: 
    Po vytvoření objektu ``StopWatch`` se automaticky spouští stopky/měření. 
-   Pokud si chcete odstartovat měření sami až v průběhu programu, stáčí předat při vytváření objektu hodnoty ``false``.
+   Pokud si chcete odstartovat měření sami až v průběhu programu, 
+   stáčí předat při vytváření objektu hodnotu ``false``.
    
    Příklad: ``StopWatch stopky(false);`` 
 
@@ -53,5 +54,41 @@ isRunning()
     
     bool isRunning();
 
-Vrátí ``true`` pokud časovač běží. 
+Vrátí ``true`` pokud časovač běží.
 
+Příklad: ``stopky.isRunning();``
+
+reset()
+##################
+
+.. code-block:: cpp
+    
+    void reset(bool start = true);
+
+Resetuje stopky. 
+Parametr ``start`` určuje, zda se stopky hned po restartu rozběhnou.
+Výchozí hodnota je ``true``. 
+
+Příklad: ``stopky.reset();``
+
+getMs()
+##################
+
+.. code-block:: cpp
+    
+    time_type getMs();
+
+Vrací čas v milisekundách.
+
+Příklad: ``stopky.getMs();``
+
+getUs()
+##################
+
+.. code-block:: cpp
+    
+    time_type getUs();
+
+Vrací čas v mikrosekundách.
+
+Příklad: ``stopky.getUs();``
