@@ -26,12 +26,7 @@ Po stažení skriptu postupujte podle obrázkového návodu.
    Skript vždy stáhne požadovaný software a spustí jeho instalaci. 
    Po dokončení instalace pokračuje na další software.
 
-   Takto se nainstaluje:
-
-   * 7-Zip
-   * Visual Studio Code
-   * Cygwin
-   * GCC ARM překladač
+   Takto se nainstaluje: 7-Zip, Visual Studio Code, Cygwin, GCC ARM překladač
 
 .. figure:: /rb3rt-install/rb3rt-installation-05-firewall.png
    :align: center
@@ -101,7 +96,7 @@ Visual Studio Code (VS Code)
    Nyní se otevřel adresář s ukázkovým projektem.
 
 Nastavení klávesových zkratek
-###############################
+*******************************
 
 .. figure:: /rb3rt-install/rb3rt-installation-16-vscode-keybinding-open-file.png
    :align: center
@@ -139,7 +134,7 @@ Nastavení klávesových zkratek
 
 
 Přeložení programu
-###############################
+*******************************
 
 .. figure:: /rb3rt-install/rb3rt-installation-21-vscode-open-app.png
    :align: center
@@ -166,7 +161,7 @@ Přeložení programu
  
 
 Systém EV3RT
-###############################
+*******************************
 
 Pro spuštění systému EV3RT na LEGO MINDSTORMS EV3 je potřeba nahrát image systému na micro SDHC kartu.
 
@@ -181,7 +176,7 @@ Pak již stačí jen spustit Brick.
 
 
 Nahrání programu do EV3RT
-###############################
+*******************************
 
 Nahrání programu je velmi jednoduché. Systém EV3RT se při připojení Bricku k PC chová jako standardní Flash disk.
 Stačí tedy vzít přeložený program (soubor ``app``) ze složky s vaším projektem a vložit jej na SD kartu do adresáře ``ev3rt\apps\``.
