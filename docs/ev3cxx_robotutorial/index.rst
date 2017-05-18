@@ -9,7 +9,7 @@
    04-catch_and_return
    05-switch
 
-Vítejte v Robotutoriálu. V následujících 7 lekcích tě provedu základními úlohami, které tě naučí pracovat s LEGO MINDSTORMS EV3.
+Vítejte v Robotutoriálu. V následujících několika lekcích tě provedu základními úlohami, které tě naučí pracovat s LEGO MINDSTORMS EV3.
 
 V rámci tutoriálu budeme pracovat s robotem Educator. Návod na jeho složení najdeš na `těchto stránkách <http://robotsquare.com/wp-content/uploads/2013/10/45544_educator.pdf>`_. 
 

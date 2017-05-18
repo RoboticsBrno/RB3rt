@@ -13,4 +13,3 @@ Již jsme s ní pracovali v rámci cyklu, takže by to neměl být žádný prob
 .. literalinclude:: 05-switch/app.cpp
    :language: cpp
 
-V následujícím úkole se můžeš těšit na jízdu po čáře.
