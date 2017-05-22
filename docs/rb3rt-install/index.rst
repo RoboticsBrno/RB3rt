@@ -118,7 +118,7 @@ Nastavení klávesových zkratek
    :align: center
 
    Nyní vidíte všechny klávesové zkratky ve VS Code. 
-   My potřebujeme ale nastavit vlastní, a proto klikneme na odkaz ``keybindings.json``, který najdete v okně s přehledem zkratek, hned pod vyhledávacím polem a ve větě s textem: For advanced customizations opne add edit ``keybindings.json``. 
+   My potřebujeme ale nastavit vlastní, a proto klikneme na odkaz ``keybindings.json``, který najdete v okně s přehledem zkratek, hned pod vyhledávacím polem a ve větě s textem: For advanced customizations open add edit ``keybindings.json``. 
 
 .. figure:: /rb3rt-install/rb3rt-installation-19-vscode-keybinding-opened-user-setting.png
    :align: center
@@ -182,7 +182,7 @@ Nahrání programu je velmi jednoduché. Systém EV3RT se při připojení Brick
 Stačí tedy vzít přeložený program (soubor ``app``) ze složky s vaším projektem a vložit jej na SD kartu do adresáře ``ev3rt\apps\``.
 Tento adresář je již v image systému vytvořen a obsahuje ukázkový projekt ``helloev3``.
 Projekty na kartě si můžete přejmenovávat jak chcete.
-Názvy souborů ale nesmí obsahovat diakritiku (háčky, čárku), mezery a nebo speciálním znakům ($%^&#@). Pro oddělování slov doporučuji použít pomlčku ``-`` nebo podtržítko ``_``.
+Názvy souborů ale nesmí obsahovat diakritiku (háčky, čárky), mezery a nebo speciální znaky ($%^&#@). Pro oddělování slov doporučuji použít pomlčku ``-`` nebo podtržítko ``_``.
 
 
    
