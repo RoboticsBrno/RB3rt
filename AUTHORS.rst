@@ -3,6 +3,7 @@ Autor
 
 * Jaroslav Páral
 
+Dotazy zasílejte na: paral@robotikabrno.cz
 
 LEGO, logo LEGO a MINDSTORMS jsou ochranné známky LEGO Group. 
 

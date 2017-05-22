@@ -197,7 +197,7 @@ Nahrání programu je velmi jednoduché. Systém EV3RT se při připojení Brick
 Stačí tedy vzít přeložený program (soubor ``app``) ze složky s vaším projektem a vložit jej na SD kartu do adresáře ``ev3rt\apps\``.
 Tento adresář je již v image systému vytvořen a obsahuje ukázkový projekt ``helloev3``.
 Projekty na kartě si můžete přejmenovávat jak chcete.
-Názvy souborů ale nesmí obsahovat diakritiku (háčky, čárky), mezery a nebo speciální znaky ($%^&#@). Pro oddělování slov doporučuji použít pomlčku ``-`` nebo podtržítko ``_``.
+Názvy souborů a složek ale nesmí obsahovat diakritiku (háčky, čárky), mezery a nebo speciální znaky ($%^&#@). Pro oddělování slov doporučuji použít pomlčku ``-`` nebo podtržítko ``_``.
 
 
    
