@@ -28,13 +28,13 @@ Všechny senzory se inicializují:
 
 .. code-block:: cpp
 
-    //ev3cxx::nazev_tridy_senzoru nazev_objektu(ev3cxx::SensorPort::cislo_portu);
-    ev3cxx::TouchSensor touchS(ev3cxx::SensorPort::1);
+    //ev3cxx::nazev_tridy_senzoru nazev_objektu(ev3cxx::SensorPort::oznaceni_portu);
+    ev3cxx::TouchSensor touchS(ev3cxx::SensorPort::S1);
 
 
-Vytvořili jsme tedy objekt ``touchS``, která je nastavena na port číslo ``1``.
+Vytvořili jsme tedy objekt ``touchS``, která je nastavena na port číslo ``S1``.
 
-Na *Bricku* můžeme využít všechny porty pro senzory: ``1``, ``2``, ``3`` a ``4``. 
+Na *Bricku* můžeme využít všechny porty pro senzory: ``S1``, ``S2``, ``S3`` a ``S4``. 
 
 TouchSensor
 *****************
@@ -242,7 +242,7 @@ Ultrazvuk v EV3CXX poskytuje tyto metody:
    Ultrazvuk v EV3 umí měřit v rozsahu od 3 do 255 centimetrů. 
    Pokud se budete pohybovat na hranici 3 centimetrů, může se stát, že ultrazvuk nedokáže danou vzdálenost změřit a místo hodnoty blízké 3 cm vrátí hodnotu rovnou maximální vzdálenosti => 255 cm.
    
-   Pamatujte na tuto vlastnosti při návrhu a programování vašich robotů. Nejbezpečnějším řešením je umístit ultrazvuk tak, aby samotná konstrukce nedovolila menší vzdálenost než 4 a více centimetrů.
+   Pamatujte na tuto vlastnost při návrhu a programování vašich robotů. Nejbezpečnějším řešením je umístit ultrazvuk tak, aby samotná konstrukce nedovolila menší vzdálenost než 4 a více centimetrů.
 
 centimeters() 
 ###############
