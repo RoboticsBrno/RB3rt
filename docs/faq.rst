@@ -37,4 +37,24 @@ Senzory v EV3CXX jsou označovány: ``S1``, ``S2``, ``S3`` a ``S4``.
    // takhle je to spravne
 
 
+error: ambiguous overload for 'operator%' (operand types are 'ev3cxx::detail::format_impl
+###########################################################################################
 
+Chyba může nastat, když například předáte strukturu ``colorid_t`` do metody ``format()`` přes ``%``.
+
+Příklad:
+
+.. code-block:: cpp
+
+   colorid_t col = colorS.color();
+   display.format("Color: % \n") % col;
+
+Metoda ``format()`` neumí pracovat se strukturou ``colorid_t``. Pokud si chceme zobrazit danou barvu, musíme například použít podmínku:
+
+.. code-block:: cpp
+
+   colorid_t col = colorS.color();
+
+   if (col == COLOR_BLACK) {
+      display.format("Black color\n");
+   }
