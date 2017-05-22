@@ -19,6 +19,9 @@ Pokud chcete založit nový projekt, stačí jen zkopírovat složku s ukázkov�
 Chyby při překladu programu
 **********************************
 
+Nadpisy podkapitol jsou buď celé nebo zkrácené chybové hlášky, které se mohou během překladu zobrazit. 
+
+
 error: expected unqualified-id before numeric constant
 ###############################################################
 
