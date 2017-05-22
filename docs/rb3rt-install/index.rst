@@ -19,14 +19,12 @@ Po stažení skriptu postupujte podle obrázkového návodu.
    Jelikož Windows tento skript nezná, z bezpečnostních důvodů zobrazuje toto okno.
    
    .. figure:: /rb3rt-install/rb3rt-installation-02-windows-warning.png
-      :align: center
-      :width: 70%   
+      :align: center 
 
    Pro pokračování instalace je potřeba kliknout na ``Další informace``  
 
    .. figure:: /rb3rt-install/rb3rt-installation-02-windows-warning-next.png
       :align: center
-      :width: 70%
    
    Následně spustit instalaci tlačítkem ``Přesto spustit``.
 
