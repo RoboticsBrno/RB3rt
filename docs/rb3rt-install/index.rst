@@ -9,10 +9,27 @@ Veškerý software se nainstaluje na diskový oddíl ``C:``.
 
 Po stažení skriptu postupujte podle obrázkového návodu.
 
-.. figure:: /rb3rt-install/rb3rt-installation-02-folder.png
+.. figure:: /rb3rt-install/rb3rt-installation-01-folder.png
    :align: center
 
    Nejprve je potřeba spustit instalační skript.
+
+.. warning:: 
+   Na novějších verzích Windows (8,10) se zobrazí okno s informací o nerozpoznané aplikaci. 
+   Jelikož Windows tento skript nezná, z bezpečnostních důvodů zobrazuje toto okno.
+   
+   .. figure:: /rb3rt-install/rb3rt-installation-02-windows-warning.png
+      :align: center
+      :width: 70%   
+
+   Pro pokračování instalace je potřeba kliknout na ``Další informace``  
+
+   .. figure:: /rb3rt-install/rb3rt-installation-02-windows-warning-next.png
+      :align: center
+      :width: 70%
+   
+   Následně spustit instalaci tlačítkem ``Přesto spustit``.
+
 
 .. figure:: /rb3rt-install/rb3rt-installation-03-download-wget.png
    :align: center
