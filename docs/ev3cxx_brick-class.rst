@@ -180,8 +180,16 @@ Příklad: ``ev3cxx::display.format("Ahoj svete! \nJak se mas?");``
 Na prvním řádku displeje bude po provedení tohoto příkazu text "Ahoj svete!".
 Na druhém řádku pak "Jak se mas?".
 
-``format`` také umožňuje vypisovat na displej hodnotu proměnných.
-Lze vypisovat pouze celočíselné proměnné a řetězce.
+``format`` také umožňuje vypisovat na displej hodnotu proměnných pomocí znaku ``%``.
+Lze vypisovat proměnné a řetězce.
+
+.. warning:: 
+
+    Pozor: znak ``%`` pro výpis proměnné vždy "sežere" znak, následující bezprostředně za ním!
+    Z toho důvodu jsou v prvním příkladu s hodinami za znakem ``%`` napsány dvě mezery.
+    První mezeru "sežere" ``%``, druhá se vypíše.
+    Mít za ``%`` mezeru je nezbytně nutné i v případě, že je ``%`` posledním znakem v řetězci.
+    Pokud za ``%`` následuje hned konec řetězce, je chování nedefinované.
 
 Příklad:
 
@@ -195,6 +203,9 @@ Vypíše na displej text "Je 19 hodin a 42 minut.".
 
 Také se dá specifikovat zarovnání výpisu proměnné doprava na daný počet znaků.
 Například při výpisu hodin je dobré, když jsou hodiny i minuty vždy na stejném místě, bez ohledu na to, jestli jsou zrovna reprezentovány jednomístným, nebo dvoumístným číslem.
+
+.. note:: 
+   Zarovnání znaků je podporováno jen u celočíselných typů (``int``, ``long``, ...). Nelze jej nastavovat u čísel s plovoucí čárkou (``float`` a ``double``). U nich bude uživatelem zadané zarovnání ignorováno a použije se vždy výchozí nastavení (``float`` => ``%g`` a ``double`` - ``%f`` dle C specifikace funkce `printf <http://www.cplusplus.com/reference/cstdio/printf/>`_).
 
 Příklad:
 
@@ -225,19 +236,11 @@ Vypíše na displej text:
 
 Šestnáctková a dvojková čísla se při zarovnání doplňují číslicí 0, zatím co desítková mezerami.
 
-Chcete-li mít ve výsledném textu znak %, použijte kombinaci %%:
+Chcete-li mít ve výsledném textu znak %, použijte kombinaci ``%%``:
 
 Příklad: ``ev3cxx::display.format("10%%");``
 
 Vypíše na displej text "10%".
-
-.. warning:: 
-
-    Pozor: znak % pro výpis proměnné vždy "sežere" znak, následující bezprostředně za ním!
-    Z toho důvodu jsou v prvním příkladu s hodinami za znakem % napsány dvě mezery.
-    První mezeru "sežere" %, druhá se vypíše.
-    Mít za % mezeru je nezbytně nutné i v případě, že je % posledním znakem v řetězci.
-    Pokud za % následuje hned konec řetězce, je chování nedefinované.
 
 resetScreen() 
 ###############
