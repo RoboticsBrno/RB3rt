@@ -191,6 +191,10 @@ Lze vypisovat proměnné a řetězce.
     Mít za ``%`` mezeru je nezbytně nutné i v případě, že je ``%`` posledním znakem v řetězci.
     Pokud za ``%`` následuje hned konec řetězce, je chování nedefinované.
 
+    Příklad: |br|\
+    ``ev3cxx::display.format("%") % 1;`` číslo "1" se na displeji nezobrazí => za % není mezera |br|\
+    ``ev3cxx::display.format("% ") % 1;`` při tomto zápisu formátovacího řetězce se již číslo "1" zobrazí normálně na displej
+
 Příklad:
 
    .. code-block:: cpp
@@ -205,7 +209,7 @@ Také se dá specifikovat zarovnání výpisu proměnné doprava na daný počet
 Například při výpisu hodin je dobré, když jsou hodiny i minuty vždy na stejném místě, bez ohledu na to, jestli jsou zrovna reprezentovány jednomístným, nebo dvoumístným číslem.
 
 .. note:: 
-   Zarovnání znaků je podporováno jen u celočíselných typů (``int``, ``long``, ...). Nelze jej nastavovat u čísel s plovoucí čárkou (``float`` a ``double``). U nich bude uživatelem zadané zarovnání ignorováno a použije se vždy výchozí nastavení (``float`` => ``%g`` a ``double`` - ``%f`` dle C specifikace funkce `printf <http://www.cplusplus.com/reference/cstdio/printf/>`_).
+   Zarovnání znaků je podporováno jen u celočíselných typů (``int``, ``long``, ...). Nelze jej nastavovat u čísel s plovoucí čárkou (``float`` a ``double``). U nich bude uživatelem zadané zarovnání ignorováno a použije se vždy výchozí nastavení (``float`` => ``%g`` a ``double`` => ``%f`` `dle standardní specifikace formátování čísel v C <http://www.cplusplus.com/reference/cstdio/printf/#parameters>`_).
 
 Příklad:
 
