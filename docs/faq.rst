@@ -41,8 +41,7 @@ Senzory v EV3CXX jsou označovány: ``S1``, ``S2``, ``S3`` a ``S4``.
 
 
 error: ambiguous overload for 'operator%' (operand types are 'ev3cxx::detail::format_impl
-
-###############################################################
+#############################################################################################
 
 Chyba může nastat, když například předáte strukturu ``colorid_t`` do metody ``format()`` přes ``%``.
 
