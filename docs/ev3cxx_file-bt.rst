@@ -1,9 +1,9 @@
-Soubory a bluetooth
+Soubory a Bluetooth
 ====================
 
 V rámci C++ API jsou připraveny třídy pro práci se soubory (třída ``File``) i Bluetooth (třída ``Bluetooth``). Obě dvě třídy mají totožné rozhraní (stejné metedy) až metodu ``isConnected()``, která je k dispozici jen pro Bluetooth.
 
-Soupis dostupných metod:
+Soupis dostupných metod ve třídách:
 
 * ``open()`` - otevře soubor/bluetooth
 * ``isOpen()`` - vrací, zda je soubor/bluetooth otevřen
@@ -14,6 +14,10 @@ Soupis dostupných metod:
 * ``readNumber()`` - přečte/příjme číslo
 * ``rewind()`` - nastaví ukazatel pozice pro čtení/zápis na začátek souboru 
 * ``()`` - operátor kulaté závorky vrací file descriptor souboru/bluetooth
+
+Další dostupné metody pro práci se soubory a Bluetooth:
+
+* ``format()`` - zápis/odesílání formátovaného textu
 
 Inicializace
 *****************
@@ -148,6 +152,41 @@ Příklad: ``myFile.write('a');``
 
 .. note:: 
    Tuto metodu pravděpodobně nebudete potřebovat, protože veškerý zápis/odesílání dat můžete provádět přes metodu ``format()`` (viz dále).
+
+readChar() 
+###############
+
+.. code-block:: cpp
+    
+    int readChar();
+
+Přečte/příjme jeden znak.
+
+Vrací přečtený/doručený znak, pokud byl úspěšně přečten/přijat, jinak ``EOF`` (End Of File - signalizace konce souboru nebo chybového stavu).
+
+Příklad: ``int ch = myFile.readChar();``
+
+readNumber() 
+###############
+
+.. code-block:: cpp
+    
+    int readNumber(T &val);
+
+Přečte/příjme číslo a uloží jej do proměnné, která byla předána jako parametr ``val``.
+Zvládne přijmout jak celá čísla (``int``, ``long``, ...), tak čísla s plovoucí desetinou čárkou (``float`` a ``double``).
+
+Vrací ``true``, pokud bylo číslo úspěšně přečteno/přijato, jinak ``EOF`` (End Of File - signalizace konce souboru nebo chybového stavu).
+
+Příklady: 
+
+.. code-block:: cpp
+    
+    int i;
+    myFile.readNumber(i);
+
+    float f;
+    myFile.readNumber(f);
 
 
 format() 
