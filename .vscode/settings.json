@@ -1,6 +1,6 @@
 {
     "restructuredtext.builtDocumentationPath" : "docs/_build/html",
-    "restructuredtext.makefilePath" : ".",
     "restructuredtext.updateOnTextChanged" : "true",
-    "restructuredtext.makefilePath" : "docs"
+    "restructuredtext.makefilePath" : "docs",
+    "editor.wordWrap": "on"
 }
