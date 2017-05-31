@@ -31,7 +31,7 @@ Hlavním cílem EV3RT C++ API je umožnit jednoduchý přechod uživatelům zvyk
 Obsah:
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    :glob:
 
    ev3cxx_motor-class
