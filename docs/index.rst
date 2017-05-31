@@ -28,7 +28,7 @@ Hlavním cílem EV3RT C++ API je umožnit jednoduchý přechod uživatelům zvyk
 .. _EV3RT: http://ev3rt-git.github.io/
 
 
-Contents:
+Obsah:
 
 .. toctree::
    :maxdepth: 2
@@ -45,12 +45,4 @@ Contents:
    faq
    *
 
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
 
