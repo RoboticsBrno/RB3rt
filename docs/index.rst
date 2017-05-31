@@ -39,6 +39,7 @@ Contents:
    ev3cxx_sensor-class
    ev3cxx_brick-class
    ev3cxx_time-class
+   ev3cxx_file-bt
    Robotutoriál <ev3cxx_robotutorial/index>
    Instalace vývojového prostředí <rb3rt-install/index>
    faq
