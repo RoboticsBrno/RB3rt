@@ -201,7 +201,12 @@ Názvy souborů a složek ale nesmí obsahovat diakritiku (háčky, čárky), me
 
 
    
-   
+Předdefinované klávesové zkratky
+**********************************
+
+* ``F5`` spuštění překladu programu
+* ``F8`` otevření programu Lorris (obsahuje terminál pro práci s Bluetooth)
+* ``F9`` otevření webové stránky s online dokumentací k EV3RT C++ API
    
    
    
