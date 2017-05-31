@@ -1,13 +1,18 @@
-Úvod
+Robotutoriál
 ===================================
 
 .. toctree::
+   :maxdepth: 1
    
+   index
    01-triangle
    02-square
    03-draw_house
    04-catch_and_return
    05-switch
+
+Úvod
+*****************
 
 Vítejte v Robotutoriálu. V následujících několika lekcích tě provedu základními úlohami, které tě naučí pracovat s LEGO MINDSTORMS EV3.
 
@@ -25,3 +30,4 @@ Nezapomeňte složit i barevnou kostku, budeme ji potřebovat.
    Robot Educator
 
 Jsi připraven začít? Tak pojďme na to.
+
