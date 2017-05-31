@@ -127,7 +127,7 @@ Nastavení klávesových zkratek
 .. figure:: /rb3rt-install/rb3rt-installation-17-vscode-keybinding-open-setting.png
    :align: center
    
-   Otevřete nadku ``File`` => ``Preferences`` => ``Keyboard Shortcuts``.
+   Otevřete nabídku: :menuselection:`File --> Preferences --> Keyboard Shortcuts`.
 
 .. figure:: /rb3rt-install/rb3rt-installation-18-vscode-keybinding-opened-setting.png
    :align: center
