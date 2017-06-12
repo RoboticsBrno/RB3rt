@@ -105,7 +105,7 @@ onForSeconds()
                       unsigned int time_ms = 1000, 
                       bool brake = true) 
 
-Metoda ``onForSeconds()`` nastavuje čas, jak dlouho se má motor točit. 
+Metoda ``onForSeconds()`` nastavuje dobu, po kterou se má motor točit. 
 Jako parametry se předávají: ``speed``, ``time_ms``, ``brake``. 
 
 Použití: ``motor.onForSeconds(50, 1000);``
