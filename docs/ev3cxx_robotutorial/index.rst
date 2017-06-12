@@ -23,7 +23,7 @@ Jsi připraven začít? Tak pojďme na to.
 
 
 Kapitoly tutoriálu
-*****************
+*******************
 
 .. toctree::
    :maxdepth: 1
