@@ -4,7 +4,7 @@
 Ve třetím úkolu nebudeme jen jezdit, ale zkusíme i kreslit. 
 Takže papír, tužku, izolepu a jdeme kreslit.
 Zkusíme si robotem nakreslit dům. 
-Pro kreslení je asi nejvhodnější fix a k robotovy ji můžeme přidělat pomocí izolepy na přední packu.
+Pro kreslení je asi nejvhodnější fix a k robotovi ji můžeme přidělat pomocí izolepy na přední packu.
 Pamatuj na to, že střed robota není střed fixe. 
 S tímto musí váš program počítat.
 
