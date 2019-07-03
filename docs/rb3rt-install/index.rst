@@ -3,7 +3,7 @@ Instalace vývojového prostředí
 
 Pro jednodušší používání C++ knihoven je k dispozici předpřipravené vývojového prostředí.
 
-K instalaci prostředí je připraven skript `RB3rt-install.bat <http://files.robotikabrno.cz/RB3rt-install.bat>`_. 
+K instalaci prostředí je připraven skript `RB3rt-install.bat (pro 64-bitový systém) <http://files.robotikabrno.cz/RB3rt-install.bat>`_ nebo `RB3rt-install-x86.bat (pro 32-bitový systém) <http://files.robotikabrno.cz/RB3rt-install-x86.bat>`_. 
 
 Veškerý software se nainstaluje na diskový oddíl ``C:``.
 
