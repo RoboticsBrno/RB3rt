@@ -133,12 +133,15 @@ Nastavení klávesových zkratek
    :align: center
 
    Nyní vidíte všechny klávesové zkratky ve VS Code. 
-   My potřebujeme ale nastavit vlastní, a proto klikneme na odkaz ``keybindings.json``, který najdete v okně s přehledem zkratek, hned pod vyhledávacím polem a ve větě s textem: For advanced customizations open add edit ``keybindings.json``. 
+   My potřebujeme ale nastavit vlastní, a proto v pravém horním rohu editoru klikněte na ikonu ``Open Keyboard Shortcuts (JSON)``. 
+
+   .. note:: 
+      Ve starších verzích VS Code není ikona ``Open Keyboard Shortcuts (JSON)`` a místo ní je k dispozici odkaz ``keybindings.json``. Odkaz najdete v okně s přehledem zkratek, hned pod vyhledávacím polem, ve větě s textem: For advanced customizations open add edit ``keybindings.json``.
 
 .. figure:: /rb3rt-install/rb3rt-installation-19-vscode-keybinding-opened-user-setting.png
    :align: center
    
-   V právem okně se otevře soubor ``keybindings.json``. 
+   V novém okně se otevře soubor ``keybindings.json``. 
    Do tohoto souboru je potřeba nakopírovat obsah souboru ``keybindings.json``, který jsme otevírali v úvodu.
 
 
